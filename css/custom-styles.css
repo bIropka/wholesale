@@ -611,12 +611,12 @@ nav ul li .active {
     width: 40px;
     height: 25px;
     margin: 7px 0;
-    background: url('../images/icons/sprite-category-icons.png') no-repeat left center;
+    background: url('../images/icons/sprite-icons-color.png') no-repeat -1% center;
     background-size: cover;
 }
-.nav-categories li:nth-child(2) .icon {background: url('../images/icons/sprite-category-icons.png') no-repeat 33% center; background-size: cover;}
-.nav-categories li:nth-child(3) .icon {width: 30px; background: url('../images/icons/sprite-category-icons.png') no-repeat 66% center; background-size: cover;}
-.nav-categories li:nth-child(4) .icon {width: 35px; background: url('../images/icons/sprite-category-icons.png') no-repeat 100% center; background-size: cover;}
+.nav-categories li:nth-child(2) .icon {background: url('../images/icons/sprite-icons-color.png') no-repeat 20% center; background-size: cover;}
+.nav-categories li:nth-child(3) .icon {width: 30px; background: url('../images/icons/sprite-icons-color.png') no-repeat 39% center; background-size: cover;}
+.nav-categories li:nth-child(4) .icon {width: 35px; background: url('../images/icons/sprite-icons-color.png') no-repeat 60% center; background-size: cover;}
 .nav-categories li a {
     display: inline-block;
     height: 25px;
