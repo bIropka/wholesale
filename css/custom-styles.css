@@ -1464,6 +1464,7 @@ nav ul li .active {
 /******** END OF MAIN-CATALOG PAGE ********/
 
 /******** PRODUCT-CARD PAGE ********/
+
 .product-page {
     position: relative;
 }
@@ -1479,12 +1480,13 @@ nav ul li .active {
 .articul, .articul span {
     color: #808080;
 }
+/* product-gallery */
 .product-gallery {
     width: 500px;
     height: 490px;
     text-align: center;
     margin: 20px 0 50px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid rgba(204, 204, 204, 0.5);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -1527,6 +1529,9 @@ nav ul li .active {
     left: 0;
     right: 0;
 }
+/* end of product-gallery */
+
+/* main-info */
 .main-info {
     float: left;
     width: 370px;
@@ -1580,6 +1585,9 @@ nav ul li .active {
     text-align: center;
     line-height: 25px;
 }
+/* end of main-info */
+
+/* order-block */
 .order-block {
     float: right;
     width: 320px;
@@ -1676,6 +1684,9 @@ nav ul li .active {
     bottom: 0;
     left: 30px;
 }
+/* end of order-block */
+
+/* block-help */
 .block-help {
     float: right;
     width: 320px;
@@ -1726,6 +1737,126 @@ nav ul li .active {
 .block-help a:hover {
     text-decoration: none;
 }
+/* enf of block-help */
+
+/* product-info */
+.nav-product-info li {
+    font-size: 25px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+}
+.nav-product-info li:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.nav-product-info li:after {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 0;
+    border-bottom: 5px solid #ffcc00;
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+    z-index: 1;
+}
+.nav-product-info>.active:after {
+    display: block;
+}
+.product-info {
+    display: block;
+    width: 70%;
+    float: left;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    position: relative;
+}
+.product-info>li {
+    display: none;
+}
+.product-info>.active {
+    display: block;
+}
+.product-info .description, .product-info .characteristics {
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    padding: 30px 20px 60px 50px;
+}
+.product-info .description h3 {
+    margin-bottom: 25px;
+}
+.product-info .description p {
+    color: #808080;
+    margin-bottom: 15px;
+    text-indent: 25px;
+    text-align: justify;
+}
+.product-info .description .hidden {
+    display: none;
+}
+.product-info .characteristics .title {
+    font-size: 20px;
+    margin: 35px 0 25px;
+}
+.product-info .characteristics ul >li:first-child .title {
+    margin-top: 0;
+}
+.product-info .characteristics ul li {
+    display: block;
+    width: 100%;
+}
+.product-info .characteristics ul .hidden {
+    display: none;
+}
+.char-name, .char-value {
+    display: inline-block;
+    width: 49%;
+    padding-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #666666;
+}
+.char-name:after {
+    display: inline-block;
+    content:'.........................................................................................................';
+    margin-left: 5px;
+}
+.product-info .show-all {
+    display: inline-block;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #4d4d4d;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+}
+.product-info .show-all:hover {
+    background: rgba(204, 204, 204, 0.5);
+}
+.product-info .show-all:active {
+    border: 1px solid rgba(204, 204, 204, 1);
+    background: rgba(204, 204, 204, 1);
+}
+/* end of product-info */
+
+/* reviews */
+    .reviews {
+        display: block;
+        width: 30%;
+        height: 600px;
+        float: right;
+        border: 1px solid rgba(204, 204, 204, 0.5);
+        position: relative;
+    }
+/* end of reviews */
+
+/* product-page-sliders */
 .light-background {
     background: #f7f7f8;
     padding: 1px 0 50px;
@@ -1777,7 +1908,7 @@ nav ul li .active {
     vertical-align: middle;
     margin: 12px 0 0 35px;
 }
-
+/* end of product-page-sliders */
 
 /******** END OF PRODUCT-CARD PAGE ********/
 /*  */

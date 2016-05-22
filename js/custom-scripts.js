@@ -218,4 +218,18 @@ $(document).ready(function () {
     });
     /* end of product-gallery */
 
+    /* product-info */
+    $('.nav-product-info li').click(function() {
+        var currentIndex = $(this).index();
+        $('.product-info .active').removeClass('active');
+        $('.product-info li').eq(currentIndex).addClass('active');
+        $('.nav-product-info li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.product-info .show-all').click(function() {
+        $(this).parents('.product-info li').find('.hidden').slideToggle(1000);
+    });
+    /* end of product-info */
+
 });
