@@ -200,4 +200,22 @@ $(document).ready(function () {
     });
     /* end of articles */
 
+    /* product-gallery */
+    $('.slider-large').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-small',
+        arrows: false
+    });
+    $('.slider-small').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-large',
+        focusOnSelect: true,
+        appendArrows: '.product-gallery .controls',
+        prevArrow: '.product-gallery .left-control',
+        nextArrow: '.product-gallery .right-control'
+    });
+    /* end of product-gallery */
+
 });
