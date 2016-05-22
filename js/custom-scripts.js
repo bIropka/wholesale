@@ -218,7 +218,7 @@ $(document).ready(function () {
     });
     /* end of product-gallery */
 
-    /* product-info */
+    /* product-info and reviews */
     $('.nav-product-info li').click(function() {
         var currentIndex = $(this).index();
         $('.product-info .active').removeClass('active');
@@ -229,7 +229,13 @@ $(document).ready(function () {
 
     $('.product-info .show-all').click(function() {
         $(this).parents('.product-info li').find('.hidden').slideToggle(1000);
+        $(this).toggleClass('hide-all');
     });
-    /* end of product-info */
+
+    $('.reviews .show-all').click(function() {
+        $(this).siblings('.hidden').slideToggle(1000);
+        $(this).toggleClass('hide-all');
+    });
+    /* end of product-info and reviews */
 
 });
