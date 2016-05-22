@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/custom-styles.css"/>
+</head>
+<body>
+
+<div class="header-top">
+
+    <div class="block-content">
+
+        <nav>
+            <ul>
+                <li><a class="active" href="#">О НАС</a></li>
+                <li><a href="#">ОПЛАТА И ДОСТАВКА</a></li>
+                <li><a href="#">СОТРУДНИЧЕСТВО</a></li>
+                <li><a href="#">ПРАЙС-ЛИСТЫ</a></li>
+                <li><a href="#">НОВОСТИ </a></li>
+                <li><a href="#">АКЦИИ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+            </ul>
+        </nav>
+
+        <div class="phone-numbers">
+            <p class="current-number">067 123 45 67 <i class="fa fa-angle-down"></i></p>
+            <ul>
+                <li>063 123 45 67</li>
+                <li>050 123 45 67</li>
+                <li>068 123 45 67</li>
+            </ul>
+        </div>
+
+        <button class="get-callback">ОБРАТНЫЙ ЗВОНОК</button>
+
+        <a href="#" class="personal-page-link"><span class="icon"></span>Личный кабинет</a>
+
+        <a href="#" class="sign-up-link"><span class="icon"></span>Регистрация</a>
+
+    </div>
+
+</div>
+
+<div class="header-bottom">
+
+    <div class="block-content">
+
+        <div class="logo">
+            <a href="index.html"><img src="images/logo_miropta.png" alt="Миропта"/></a>
+        </div>
+
+        <div class="basket">
+            <div class="basket-icon"><div class="basket-amount-value">3</div></div>
+            <div class="basket-money">
+                <p>КОРЗИНА</p>
+                <div class="basket-money-value"><span>0,00</span> грн</div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <form action="#" class="search-form">
+            <label class="search-wrap">
+                <input class="search-field" type="text" placeholder="Поищи товары мной..."/>
+            </label>
+            <input class="search-submit green-button" type="submit" value="Найти"/>
+            <i class="fa fa-search"></i>
+            <p class="bottom-text">
+                Например: <a href="#">Набор посуды,</a><a href="#">Краска для волос</a>
+            </p>
+        </form>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+</div>
+
+<div class="basket-page">
+    <div class="block-content">
+
+        <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a><i class="fa fa-angle-right"></i></li>
+            <li>Мой кабинет <i class="fa fa-angle-right"></i></li>
+            <li>Корзина <i class="fa fa-angle-right"></i></li>
+        </ul>
+
+        <h2>Корзина</h2>
+
+        <div class="basket-product">
+            <div class="icon">&#10006;</div>
+            <div class="product-image">
+                <img src="images/content/product-kettle.jpg" alt="product-image"/>
+            </div>
+            <div class="basket-product-info">
+                <p class="text">Наименование:</p>
+                <a href="#" class="product-name">Электрический чайник Braun WK 300 (2011)</a>
+                <p class="product-cost">Цена: <span>916</span> грн</p>
+            </div>
+            <div class="basket-product-amount">
+                <p class="text">Количество:</p>
+                <div class="product-amount">
+                    <div class="control-remove control">-</div>
+                    <div class="current-amount"><span>1</span>шт</div>
+                    <div class="control-add control">+</div>
+                    <label><input class="input-amount" type="number" value="1"/></label>
+                </div>
+            </div>
+            <div class="basket-product-summa">
+                <p class="text">Сумма:</p>
+                <p class="summa"><span>916</span> грн</p>
+            </div>
+        </div>
+
+        <div class="basket-product">
+            <div class="icon">&#10006;</div>
+            <div class="product-image">
+                <img src="images/content/product-microwave.jpg" alt="product-image"/>
+            </div>
+            <div class="basket-product-info">
+                <p class="text">Наименование:</p>
+                <a href="#" class="product-name">Микроволновая печь Samsung ME83KRW-1</a>
+                <p class="product-cost">Цена: <span>2100</span> грн</p>
+            </div>
+            <div class="basket-product-amount">
+                <p class="text">Количество:</p>
+                <div class="product-amount">
+                    <div class="control-remove control">-</div>
+                    <div class="current-amount"><span>1</span>шт</div>
+                    <div class="control-add control">+</div>
+                    <label><input class="input-amount" type="number" value="1"/></label>
+                </div>
+            </div>
+            <div class="basket-product-summa">
+                <p class="text">Сумма:</p>
+                <p class="summa"><span>2100</span> грн</p>
+            </div>
+        </div>
+
+        <div class="basket-product">
+            <div class="icon">&#10006;</div>
+            <div class="product-image">
+                <img src="images/content/product-blender.jpg" alt="product-image"/>
+            </div>
+            <div class="basket-product-info">
+                <p class="text">Наименование:</p>
+                <a href="#" class="product-name">Электромиксер Bosch MFQ 4020</a>
+                <p class="product-cost">Цена: <span>1139</span> грн</p>
+            </div>
+            <div class="basket-product-amount">
+                <p class="text">Количество:</p>
+                <div class="product-amount">
+                    <div class="control-remove control">-</div>
+                    <div class="current-amount"><span>1</span>шт</div>
+                    <div class="control-add control">+</div>
+                    <label><input class="input-amount" type="number" value="1"/></label>
+                </div>
+            </div>
+            <div class="basket-product-summa">
+                <p class="text">Сумма:</p>
+                <p class="summa"><span>1139</span> грн</p>
+            </div>
+        </div>
+
+        <button class="continue-shopping">Продолжить покупки</button>
+
+        <div class="result-block">
+            <p>Итого:</p>
+            <p class="order-summa"><span>4155</span> грн</p>
+            <button class="green-button">Оформить заказ</button>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+
+<div class="footer-top">
+
+    <div class="block-content">
+
+        <div class="company-block">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_miropta.png" alt="Миропта"/></a>
+            </div>
+            <p>
+                © Интернет-магазин <a href="index.html">«МирОпта»</a>, 2011—2016 Все права защищены. Использование
+                материалов сайта только по письменному разрешению и активной ссылкой на гравную страницу сайта.
+            </p>
+            <a href="#">Карта сайта</a>
+        </div>
+
+        <ul class="footer-nav">
+            <li class="company">
+                <h3 class="title">Компания</h3>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Карьера</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Прайс-листы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </li>
+            <li class="help">
+                <h3 class="title">Помощь</h3>
+                <ul>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Возврат товара</a></li>
+                    <li><a href="#">Связь с руководством</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                </ul>
+            </li>
+            <li class="personal-cabinet">
+                <h3 class="title">Мой кабинет</h3>
+                <ul>
+                    <li><a href="#">Авторизация</a></li>
+                    <li><a href="#">Вход</a></li>
+                    <li><a href="#">Забыли пароль?</a></li>
+                    <li class="work-time"><h3>Режим работы</h3></li>
+                    <li>с 8:00 до 20:00, без выходных</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+
+    <div class="block-content">
+
+        <div class="phone-numbers">
+            <p class="current-number">067 123 45 67 <i class="fa fa-angle-down"></i></p>
+            <ul>
+                <li>063 123 45 67</li>
+                <li>050 123 45 67</li>
+                <li>068 123 45 67</li>
+            </ul>
+        </div>
+
+        <button class="get-callback">ОБРАТНЫЙ ЗВОНОК</button>
+
+        <div class="social-links">
+            <div class="title">Поделиться:</div>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+        <a href="#" class="address-link"><span></span>Наш адрес</a>
+
+    </div>
+
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/custom-scripts.js"></script>
+</body>
+</html>
