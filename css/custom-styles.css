@@ -44,6 +44,15 @@ button, input[type='submit'] {
     -moz-box-shadow: inset 0 -6px 0 -3px rgba(0,0,0,0.2);
     box-shadow: inset 0 -6px 0 -3px rgba(0,0,0,0.2);
 }
+.green-button:hover {
+    background: linear-gradient(to bottom, #bff452, #99cd33);
+}
+.green-button:active {
+    -webkit-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
+    box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, #8dc033, #74a733);
+}
 input, textarea, a, button {
     outline: none;
     border: none;
@@ -201,6 +210,15 @@ nav ul li .active {
     border: 1px solid #99cc66;
     vertical-align: middle;
     margin-right: 20px;
+}
+.get-callback:hover {
+    background: #99cc66;
+}
+.get-callback:active {
+    border: 1px solid rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 2px 2px 0 -1px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 2px 2px 0 -1px rgba(0,0,0,0.2);
+    box-shadow: inset 2px 2px 0 -1px rgba(0,0,0,0.2);
 }
 .personal-page-link, .sign-up-link {
     display: inline-block;
@@ -819,11 +837,12 @@ nav ul li .active {
     left: -15px;
     top: 0;
     bottom: 0;
-    font-size: 30px;
+    font-size: 30px!important;
     line-height: 20px;
     text-align: center;
     z-index: 1;
     cursor: pointer;
+    color: inherit!important;
 }
 .nav-products-wrap .right-control {
     left: auto;
