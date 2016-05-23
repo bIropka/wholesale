@@ -214,7 +214,15 @@ $(document).ready(function () {
         focusOnSelect: true,
         appendArrows: '.product-gallery .controls',
         prevArrow: '.product-gallery .left-control',
-        nextArrow: '.product-gallery .right-control'
+        nextArrow: '.product-gallery .right-control',
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
     /* end of product-gallery */
 
