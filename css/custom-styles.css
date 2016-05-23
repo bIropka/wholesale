@@ -2027,11 +2027,13 @@ nav ul li .active {
     min-height: 47.5vh;
     background: #efeff0;
     padding: 30px 0;
+    overflow: hidden;
 }
 .basket-product {
     width: 100%;
     background: #ffffff;
     margin: 20px 0;
+    overflow: hidden;
 }
 .basket-product .icon {
     display: inline-block;
@@ -2046,7 +2048,8 @@ nav ul li .active {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    margin: 0 15px;
+    margin: 65px 15px;
+    float: left;
 }
 .basket-product .product-image {
     display: inline-block;
@@ -2055,6 +2058,7 @@ nav ul li .active {
     height: 140px;
     margin: 10px 0;
     position: relative;
+    float: left;
 }
 .basket-product .product-image img {
     position: absolute;
@@ -2066,9 +2070,10 @@ nav ul li .active {
 .basket-product-info {
     display: inline-block;
     vertical-align: middle;
-    width: 45%;
     height: 100px;
-    margin: 0 10px;
+    width: 38%;
+    margin: 30px 0 30px 20px;
+    float: left;
 }
 .basket-product .text {
     color: #999999;
@@ -2088,6 +2093,8 @@ nav ul li .active {
     display: inline-block;
     vertical-align: middle;
     height: 100px;
+    margin: 30px 0;
+    float: left;
 }
 .basket-product-amount .product-amount {
     margin-top: 5px;
@@ -2096,7 +2103,9 @@ nav ul li .active {
     display: inline-block;
     vertical-align: middle;
     height: 100px;
-    margin-left: 150px;
+    width: 190px;
+    margin: 30px 20px 30px 0;
+    float: right;
 }
 .basket-product-summa .summa, .basket-product-summa .summa span {
     font-size: 32px;
@@ -2330,6 +2339,26 @@ nav ul li .active {
     .nav-catalog ul {
         height: auto;
     }
+    .basket-product {
+        position: relative;
+    }
+    .basket-product .product-image, .basket-product-info,
+    .basket-product-amount, .basket-product-summa {
+        float: none;
+        margin: 10px 25px;
+    }
+    .basket-product .icon {
+        float: none;
+        vertical-align: top;
+        margin: 0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .basket-product-info {
+        width: 300px;
+        height: auto;
+    }
 }
 @media (max-width: 800px) {
     h2 {
@@ -2389,6 +2418,10 @@ nav ul li .active {
         width: 100%;
         margin: 10px 0;
     }
+    .continue-shopping, .result-block {
+        float: none;
+        margin: 10px 5px;
+    }
 }
 @media (max-width: 480px) {
     .nav-products-wrap {
@@ -2414,6 +2447,20 @@ nav ul li .active {
     }
     .control-pages {
         margin: 20px 0 10px;
+    }
+    .basket-product .product-image, .basket-product-info,
+    .basket-product-amount, .basket-product-summa {
+        margin: 10px 5px;
+    }
+    .result-block {
+        width: 300px;
+    }
+    .result-block p, .result-block p span {
+        font-size: 32px;
+    }
+    .result-block .green-button {
+        width: 250px;
+        margin: 10px 5px;
     }
 
 }
