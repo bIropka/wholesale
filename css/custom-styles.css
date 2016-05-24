@@ -561,6 +561,10 @@ nav ul li .active {
 }
 .catalog-item-hidden {
     display: none;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    width: 300px;
+    margin-left: -1px;
 }
 .nav-catalog-mark {
     display: inline-block;
@@ -804,7 +808,6 @@ nav ul li .active {
     margin-top: 10px;
 }
 .nav-products .slide {
-    width: 190px;
     height: 148px;
     border: 1px solid #e6e6e6;
     text-align: center;
@@ -936,7 +939,7 @@ nav ul li .active {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin: 5px 10px 0;
+    margin: 15px 10px;
     position: relative;
 }
 .product-card-image {
@@ -945,6 +948,7 @@ nav ul li .active {
     margin: 20px auto 15px;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 .product-card-name {
     display: block;
@@ -1001,8 +1005,12 @@ nav ul li .active {
 /* end of popular-products-wrap & new-products-wraps */
 .article-card {
     width: 300px!important;
-    margin: 0 10px;
+    margin: 15px 10px;
     position: relative;
+    border: 1px solid transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 .article-category {
     font-size: 16px;
@@ -1276,9 +1284,18 @@ nav ul li .active {
     line-height: 30px;
     float: right;
     margin-right: 10px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
 }
-.select-filter:hover ul {
-    display: block;
+.select-filter .fa-reverse {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
 }
 .select-filter ul {
     display: none;
@@ -1333,7 +1350,7 @@ nav ul li .active {
     text-align: left;
     text-align-last: left;
 }
-.product-card:hover {
+.product-card:hover, .product-card-light:hover, .article-card:hover {
     border: 1px solid transparent;
     -webkit-box-shadow: 0 0 0 5px #ffcc00, 0 0 15px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 0 0 5px #ffcc00, 0 0 15px 0 rgba(0, 0, 0, 0.5);
@@ -2053,6 +2070,7 @@ nav ul li .active {
     background: #ffffff;
     margin: 20px 0;
     overflow: hidden;
+    cursor: pointer;
 }
 .basket-product .icon {
     display: inline-block;
@@ -2069,6 +2087,16 @@ nav ul li .active {
     border-radius: 3px;
     margin: 65px 15px;
     float: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.basket-product .icon:hover {
+    background: linear-gradient(to bottom, #fff700, #ffd000);
+}
+.basket-product .icon:active {
+    background: linear-gradient(to bottom, #ffd000, #fff700);
 }
 .basket-product .product-image {
     display: inline-block;
@@ -2237,12 +2265,17 @@ nav ul li .active {
         width: 760px;
         margin: 20px auto 0;
     }
+    .nav-catalog-main {
+        float: left!important;
+        margin-top: 20px!important;
+    }
     .nav-slider {
         display: none;
     }
     .hidden-clearfix {
         display: none;
     }
+
     .order-links {
         width: 70%;
         float: right;
@@ -2332,14 +2365,15 @@ nav ul li .active {
     .search-field {
         width: 70%;
     }
-    .nav-catalog {
-        float: none;
+    .nav-catalog, .nav-catalog-main {
+        display: block;
+        float: none!important;
         width: 40%;
         min-width: 300px;
-        margin: 0 auto;
+        margin: 20px auto;
     }
     .block-navs, .order-links {
-        float: none;
+        float: none!important;
         width: 100%;
         margin: 10px auto;
     }

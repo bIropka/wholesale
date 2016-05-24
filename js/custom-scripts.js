@@ -33,6 +33,10 @@ $(document).ready(function () {
         var newCurrentValue = $(this).html();
         $(this).parents('.select-filter').find('.current-value').html(newCurrentValue);
     });
+    $('.select-filter').click(function() {
+        $('.select-filter ul').slideToggle();
+        $('.select-filter i').toggleClass('fa-reverse');
+    });
     /* end of select-filter */
 
     /* product-amount */
