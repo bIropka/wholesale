@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    /* phone-numbers */
+    $('.phone-numbers').hover(function() {
+        $(this).toggleClass('active');
+        $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
+    });
+    /* end of phone-numbers */
+
     /* search-form */
     $('.search-field').focus(function(){
         $(this).parent().siblings('.fa-search').css('opacity', 0);

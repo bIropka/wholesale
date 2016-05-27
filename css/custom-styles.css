@@ -151,32 +151,71 @@ nav ul li .active {
 }
 .phone-numbers {
     display: inline-block;
+    width: 175px;
     height: 40px;
     position: relative;
-    margin: 0 30px;
+    margin: 0 20px;
+    padding: 0 10px 0 5px;
+    border: 2px solid transparent;
 }
-.phone-numbers ul {
+.phone-numbers .contacts-hidden {
     display: none;
     position: absolute;
-    width: 100%;
-    background: rgba(247, 247, 248, 0.8);
-    left: 0;
-    top: 100%;
-    padding-left: 20px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    width: 175px;
+    left: -2px;
+    top: 38px;
     z-index: 1;
-    border: 1px solid #cccccc;
+    border: 2px solid #ffcc00;
     border-top: none;
+    background: #ffffff;
 }
-.phone-numbers ul li {
+.active .contacts-hidden {
+    display: block;
+}
+.phone-numbers:hover {
+    border: 2px solid #ffcc00;
+    border-bottom: none;
+    background: #ffffff;
+}
+.contacts-hidden .other-number {
+    display: block;
+    height: 20px;
     font-family: "Arimo Bold", sans-serif;
     font-size: 18px;
-    margin-top: 5px;
+    vertical-align: middle;
+    line-height: 20px;
+    margin-left: 30px;
 }
-.phone-numbers:hover ul {
+.contacts-hidden .business-hours:after, .contacts-hidden .business-hours:before {
+    content: '';
     display: block;
+    width: 135px;
+    margin: 10px auto;
+    border-top: 1px dotted #cccccc;
+}
+.contacts-hidden .business-hours p {
+    font-size: 18px;
+    text-align: center;
+}
+.contacts-hidden .get-callback-hidden {
+    display: block;
+    width: 140px;
+    margin: 0 auto 15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    line-height: 35px;
+    height: 35px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #ffc705, #ff9933);
+}
+.contacts-hidden .get-callback-hidden:hover {
+    background: linear-gradient(to bottom, #fffc65, #ff9933);
+}
+.contacts-hidden .get-callback-hidden:active {
+    background: linear-gradient(to bottom, #ff9933, #fffc65);
 }
 .phone-numbers .current-number {
     display: inline-block;
