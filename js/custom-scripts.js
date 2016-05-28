@@ -257,4 +257,27 @@ $(document).ready(function () {
     });
     /* end of product-info and reviews */
 
+    /* window-callback */
+    $('.get-callback').click(function () {
+        $('.window-callback').fadeIn();
+    });
+
+    $('.window-callback').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
+        if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
+    });
+
+    $('.form-callback .select-callback').click(function() {
+        $(this).find('.select-image ul').slideToggle();
+        $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
+    });
+
+    $('.form-callback .select-image ul li').click(function() {
+        var newChoice = $(this).html();
+        $(this).parents('.select-callback').find('.current-choice').html(newChoice);
+        $(this).parents('.select-callback').find('.select-hidden').val(newChoice);
+    });
+    /* end of window-callback script */
+
 });

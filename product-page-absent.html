@@ -792,11 +792,14 @@
 
         <div class="phone-numbers">
             <p class="current-number">067 123 45 67 <i class="fa fa-angle-down"></i></p>
-            <ul>
-                <li>063 123 45 67</li>
-                <li>050 123 45 67</li>
-                <li>068 123 45 67</li>
-            </ul>
+            <div class="contacts-hidden">
+                <button class="get-callback-hidden">обратная связь</button>
+                <div class="business-hours">
+                    <p>8.00 &#8212; 20.00</p>
+                    <p>без выходных</p>
+                </div>
+                <p class="other-number">063 123 45 67</p>
+            </div>
         </div>
 
         <button class="get-callback">ОБРАТНЫЙ ЗВОНОК</button>
@@ -816,6 +819,44 @@
         <a href="#" class="address-link"><span></span>Наш адрес</a>
 
     </div>
+
+</div>
+
+<div class="window-callback">
+
+    <form action="#" class="form-callback">
+
+        <div class="close-marker">&#10006;</div>
+
+        <h2>Обратный звонок</h2>
+
+        <label for="callback-client-name" class="form-field-label">Как к вам обращаться?<span>&#x002A;</span></label>
+        <input id="callback-client-name" type="text" class="form-field" required/>
+
+        <label for="callback-client-phone" class="form-field-label">Номер мобильного или стационарного телефона<span>&#x002A;</span></label>
+        <input id="callback-client-phone" type="text" class="form-field" required/>
+
+        <p class="form-field-label">Хотите говорить со специалистом?</p>
+        <div class="select-callback">
+            <i class="fa fa-angle-down"></i>
+            <div class="select-image">
+                <div class="current-choice"><span>Выбрать отдел</span></div>
+                <ul>
+                    <li>1-ый отдел</li>
+                    <li>2-ой отдел</li>
+                    <li>3-ий отдел</li>
+                    <li>4-ый отдел</li>
+                    <li>Отдел с очень-очень длинным названием</li>
+                </ul>
+            </div>
+            <label><input class="select-hidden" type="text"/></label>
+        </div>
+
+        <input type="submit" class="form-submit green-button" value="Жду звонка"/>
+
+        <input type="reset" class="form-reset grey-button" value="Отмена"/>
+
+    </form>
 
 </div>
 

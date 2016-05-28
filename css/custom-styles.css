@@ -30,7 +30,7 @@ h3 {
     font-size: 24px;
     font-weight: 100;
 }
-button, input[type='submit'] {
+button, input[type='submit'], input[type='reset'] {
     cursor: pointer;
 }
 .green-button {
@@ -52,6 +52,35 @@ button, input[type='submit'] {
     -moz-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
     box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
     background: linear-gradient(to bottom, #8dc033, #74a733);
+}
+.empty-button {
+    background: transparent;
+    border: 1px solid #b3b3b3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.empty-button:hover {
+    background: #efeff0;
+    border: 1px solid #efeff0;
+}
+.empty-button:active {
+    background: #cccccc;
+    border: 1px solid #cccccc;
+}
+.grey-button {
+    background: #efeff0;
+    border: 1px solid #efeff0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.grey-button:hover {
+    background: transparent;
+    border: 1px solid #e6e6e6;
+}
+.grey-button:active {
+    border: 1px solid #b6b6b6;
 }
 input, textarea, a, button {
     outline: none;
@@ -156,25 +185,39 @@ nav ul li .active {
     position: relative;
     margin: 0 20px;
     padding: 0 10px 0 5px;
-    border: 2px solid transparent;
+    border: 2px solid #f7f7f8;
+}
+.footer-bottom .phone-numbers {
+    border: none;
 }
 .phone-numbers .contacts-hidden {
     display: none;
     position: absolute;
     width: 175px;
     left: -2px;
-    top: 38px;
     z-index: 1;
     border: 2px solid #ffcc00;
-    border-top: none;
     background: #ffffff;
+}
+.header-top .phone-numbers .contacts-hidden {
+    top: 38px;
+    border-top: #f7f7f8;
+}
+.footer-bottom .phone-numbers .contacts-hidden {
+    bottom: 38px;
+    border-bottom: #f7f7f8;
 }
 .active .contacts-hidden {
     display: block;
 }
-.phone-numbers:hover {
+.header-top .phone-numbers:hover {
     border: 2px solid #ffcc00;
-    border-bottom: none;
+    border-bottom: #f7f7f8;
+    background: #ffffff;
+}
+.footer-bottom .phone-numbers:hover {
+    border: 2px solid #ffcc00;
+    border-top: #f7f7f8;
     background: #ffffff;
 }
 .contacts-hidden .other-number {
@@ -216,6 +259,9 @@ nav ul li .active {
 }
 .contacts-hidden .get-callback-hidden:active {
     background: linear-gradient(to bottom, #ff9933, #fffc65);
+}
+.footer-bottom .contacts-hidden .get-callback-hidden {
+    margin: 15px auto 0;
 }
 .phone-numbers .current-number {
     display: inline-block;
@@ -493,12 +539,6 @@ nav ul li .active {
 .footer-bottom .phone-numbers {
     float: left;
     margin-left: 0;
-}
-.footer-bottom .phone-numbers ul {
-    top: auto;
-    bottom: 40px;
-    border-top: 1px solid #cccccc;
-    border-bottom: none;
 }
 .footer-bottom .get-callback {
     float: left;
@@ -2204,10 +2244,6 @@ nav ul li .active {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     line-height: 40px;
-    border: 1px solid #b3b3b3;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     float: left;
 }
 .result-block {
@@ -2269,6 +2305,151 @@ nav ul li .active {
 /*  */
 
 /* end of */
+
+/******** MODAL WINDOWS ********/
+ /* window callback */
+.window-callback {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: transparent;
+    display: none;
+    z-index: 10;
+}
+.form-callback {
+    position: absolute;
+    width: 490px;
+    height: 455px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #ffffff;
+    text-align: left;
+    padding: 30px 45px;
+    z-index: 10;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 15px 10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 15px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.3);
+}
+.form-callback .close-marker {
+    display: block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #99cc33;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.close-marker:hover {
+    background: #ffffff;
+    color: #99cc33;
+}
+.close-marker:active {
+    color: #ff0000;
+}
+.form-callback h2 {
+    font-family: "Arimo Bold", sans-serif;
+    margin-bottom: 30px;
+}
+.form-callback .form-field-label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-callback .form-field-label span {
+    color: #ff0000;
+    margin-left: 3px;
+}
+.form-callback .form-field, .form-callback .select-image {
+    width: 400px;
+    height: 50px;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+.form-callback .select-callback {
+    position: relative;
+}
+.form-callback .select-image {
+    line-height: 50px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    padding-right: 40px;
+    overflow: hidden;
+}
+.form-callback .select-image span {
+    color: rgba(153, 153, 153, 0.5);
+}
+.form-callback .select-callback i {
+    font-size: 32px;
+    color: rgba(153, 153, 153, 0.3);
+    display: block;
+    height: 32px;
+    width: 32px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    z-index: -1;
+}
+.form-callback .select-image ul {
+    display: none;
+    width: 100%;
+    border: 1px solid #cccccc;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+
+}
+.form-callback .select-image ul li {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+}
+.form-callback .select-image ul li:hover {
+    color: #99cc33;
+}
+.form-callback .select-image ul li:active {
+    color: #ff0000;
+}
+.form-callback .form-submit, .form-callback .form-reset {
+    width: 125px;
+    height: 40px;
+    font-size: 16px;
+}
+.form-callback .form-submit {
+    width: 190px;
+    margin-right: 15px;
+    font-family: "Arimo Bold", sans-serif;
+    color: #ffffff;
+}
+.form-callback label {
+    display: none;
+}
+/******** END OF MODAL WINDOWS ********/
 
 
 /******** MEDIA QUERIES ********/
