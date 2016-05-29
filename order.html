@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
+    <title>Оформление заказа</title>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
@@ -81,7 +81,7 @@
 
 </div>
 
-<div class="basket-page">
+<div class="order-page">
     <div class="block-content">
 
         <ul class="breadcrumbs">
@@ -90,7 +90,58 @@
             <li>Корзина <i class="fa fa-angle-right"></i></li>
         </ul>
 
-        <h2>Корзина</h2>
+        <form action="#" class="form-order">
+
+            <h2>Оформление заказа</h2>
+
+            <div class="contact-data">
+
+                <h3>1. Контатные данные</h3>
+
+                <label for="order-client-name" class="form-field-label">Фамилия Имя Отчество<span>&#x002A;</span></label>
+                <input id="order-client-name" type="text" class="form-field" required/>
+
+                <p class="form-field-label">Город проживания</p>
+                <div class="select-callback">
+                    <i class="fa fa-angle-down"></i>
+                    <div class="select-image">
+                        <div class="current-choice"><span>Выбрать</span></div>
+                        <ul>
+                            <li>Харьков</li>
+                            <li>Киев</li>
+                            <li>Большие Комары</li>
+                            <li>Днепродзержинск</li>
+                            <li>Город с очень-очень длинным названием</li>
+                        </ul>
+                    </div>
+                    <label><input class="select-hidden" type="text" required/></label>
+                </div>
+
+                <label for="order-client-phone" class="form-field-label">Мобильный телефон<span>&#x002A;</span></label>
+                <input id="order-client-phone" type="text" class="form-field" required/>
+
+                <label for="order-client-email" class="form-field-label">Электронная почта<span>&#x002A;</span></label>
+                <input id="order-client-email" type="text" class="form-field" required/>
+
+                <p class="add-recipient">Добавить еще одного получателя</p>
+
+                <label for="" class="add-comment">Добавить комментарий к заказу</label>
+                <textarea id="order-comment" cols="30" rows="10"></textarea>
+
+                <input id="order-personal-data" type="checkbox" required/>
+                <label for="order-personal-data"></label>
+
+            </div>
+
+            <div class="payment-delivery">
+
+
+
+            </div>
+
+        </form>
+
+        <h2>Товары в корзине</h2>
 
         <div class="basket-product">
             <div class="icon">&#10006;</div>
@@ -172,7 +223,6 @@
         <div class="result-block">
             <p>Итого:</p>
             <p class="order-summa"><span>4155</span> грн</p>
-            <button class="green-button">Оформить заказ</button>
         </div>
 
     </div>
