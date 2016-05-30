@@ -125,14 +125,11 @@
 
                 <p class="add-recipient">Добавить еще одного получателя</p>
 
-                <label for="order-comment" class="add-comment form-field-label">Добавить комментарий к заказу</label>
+                <label for="order-comment" class="control-comment form-field-label hidden"><span class="show">Добавить</span><span class="hide">Скрыть</span> комментарий к заказу</label>
                 <textarea id="order-comment" cols="30" rows="10"></textarea>
 
                 <input class="checkbox-hidden" id="order-personal-data" type="checkbox" required/>
-                <label for="order-personal-data" class="form-field-checkbox">
-                    <i class="fa fa-check"></i>
-                    Даю согласие на обработку своих персональных данных
-                </label>
+                <label for="order-personal-data" class="form-field-checkbox"><i class="fa fa-check"></i>Даю согласие на обработку своих персональных данных</label>
 
             </div>
 
@@ -142,25 +139,25 @@
 
                 <div class="delivery">
 
-                    <p class="title">Доставка<span>*</span></p>
+                    <p class="title">Доставка<span> *</span></p>
 
-                    <input id="without-delivery" name="delivery-radio" type="radio" value="without" checked/>
-                    <label for="without-delivery">Самовывоз</label>
 
-                    <input id="courier-delivery" name="delivery-radio" type="radio" value="courier"/>
-                    <label for="courier-delivery">Курьерская</label>
+                    <label><input id="without-delivery" name="delivery-radio" type="radio" value="without" checked/>Самовывоз</label>
 
-                    <input id="newpost-delivery" name="delivery-radio" type="radio" value="newpost"/>
-                    <label for="newpost-delivery">Новая Почта</label>
 
-                    <input id="delivery-delivery" name="delivery-radio" type="radio" value="delivery"/>
-                    <label for="delivery-delivery">Деливери</label>
+                    <label><input id="courier-delivery" name="delivery-radio" type="radio" value="courier"/>Курьерская</label>
 
-                    <input id="mist-delivery" name="delivery-radio" type="radio" value="mist"/>
-                    <label for="mist-delivery">Мист Экспресс</label>
 
-                    <input id="ukrpost-delivery" name="delivery-radio" type="radio" value="ukrpost"/>
-                    <label for="ukrpost-delivery">Укрпочта</label>
+                    <label><input id="newpost-delivery" name="delivery-radio" type="radio" value="newpost"/>Новая Почта</label>
+
+
+                    <label><input id="delivery-delivery" name="delivery-radio" type="radio" value="delivery"/>Деливери</label>
+
+
+                    <label><input id="mist-delivery" name="delivery-radio" type="radio" value="mist"/>Мист Экспресс</label>
+
+
+                    <label><input id="ukrpost-delivery" name="delivery-radio" type="radio" value="ukrpost"/>Укрпочта</label>
 
                     <label class="delivery-hidden"><input id="other-delivery" name="delivery-radio" type="radio" value=""/></label>
 
@@ -173,22 +170,19 @@
 
                 <div class="payment">
 
-                    <p>Оплата<span>*</span></p>
+                    <p>Оплата<span> *</span></p>
 
-                    <input id="cash-payment" name="payment-radio" type="radio" value="cash"/>
-                    <label for="cash-payment">Наличными в офисе</label>
+                    <label for="cash-payment"><input id="cash-payment" name="payment-radio" type="radio" value="cash"/>Наличными в офисе</label>
 
-                    <input id="card-payment" name="payment-radio" type="radio" value="card"/>
-                    <label for="card-payment">Оплата картами Visa/Mastercard</label>
+                    <label for="card-payment"><input id="card-payment" name="payment-radio" type="radio" value="card"/>Оплата картами Visa/Mastercard</label>
 
-                    <input id="clearing-payment" name="payment-radio" type="radio" value="clearing"/>
-                    <label for="clearing-payment">Безналичный расчет</label>
+                    <label for="clearing-payment"><input id="clearing-payment" name="payment-radio" type="radio" value="clearing"/>Безналичный расчет</label>
 
-                    <input id="delivery-payment" name="payment-radio" type="radio" value="delivery"/>
-                    <label for="delivery-payment">Наложенный платеж</label>
+                    <label for="delivery-payment"><input id="delivery-payment" name="payment-radio" type="radio" value="delivery"/>Наложенный платеж</label>
 
-                    <input id="privat-payment" name="payment-radio" type="radio" value="privat"/>
-                    <label for="privat-payment">На карту Приват-банка</label>
+                    <label for="privat-payment"><input id="privat-payment" name="payment-radio" type="radio" value="privat"/>На карту Приват-банка</label>
+
+                    <input type="submit" class="form-submit green-button"/>
 
                 </div>
 

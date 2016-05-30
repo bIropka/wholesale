@@ -1,5 +1,20 @@
 $(document).ready(function () {
 
+    /* order form */
+    $('.form-field-checkbox').click(function () {
+        $(this).find('i').toggleClass('fa-check');
+    });
+
+    $('.control-comment').click(function () {
+        $('#order-comment').stop().slideToggle();
+        $(this).toggleClass('hidden');
+    });
+
+    $('.order-page .add-other-delivery p').click(function() {
+        $(this).parent().find('input').slideToggle();
+    });
+    /* end of order form */
+
     /* window-callback */
     $('.get-callback').click(function () {
         $('.window-callback').fadeIn();
