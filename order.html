@@ -141,23 +141,23 @@
 
                     <p class="title">Доставка<span> *</span></p>
 
+                    <input id="without-delivery" name="delivery-radio" type="radio" value="without" checked/>
+                    <label class="radio-label" for="without-delivery">Самовывоз</label>
 
-                    <label><input id="without-delivery" name="delivery-radio" type="radio" value="without" checked/>Самовывоз</label>
+                    <input id="courier-delivery" name="delivery-radio" type="radio" value="courier"/>
+                    <label class="radio-label" for="courier-delivery">Курьерская</label>
 
+                    <input id="newpost-delivery" name="delivery-radio" type="radio" value="newpost"/>
+                    <label class="radio-label" for="newpost-delivery">Новая Почта</label>
 
-                    <label><input id="courier-delivery" name="delivery-radio" type="radio" value="courier"/>Курьерская</label>
+                    <input id="delivery-delivery" name="delivery-radio" type="radio" value="delivery"/>
+                    <label class="radio-label" for="delivery-delivery">Деливери</label>
 
+                    <input id="mist-delivery" name="delivery-radio" type="radio" value="mist"/>
+                    <label class="radio-label" for="mist-delivery">Мист Экспресс</label>
 
-                    <label><input id="newpost-delivery" name="delivery-radio" type="radio" value="newpost"/>Новая Почта</label>
-
-
-                    <label><input id="delivery-delivery" name="delivery-radio" type="radio" value="delivery"/>Деливери</label>
-
-
-                    <label><input id="mist-delivery" name="delivery-radio" type="radio" value="mist"/>Мист Экспресс</label>
-
-
-                    <label><input id="ukrpost-delivery" name="delivery-radio" type="radio" value="ukrpost"/>Укрпочта</label>
+                    <input id="ukrpost-delivery" name="delivery-radio" type="radio" value="ukrpost"/>
+                    <label class="radio-label" for="ukrpost-delivery">Укрпочта</label>
 
                     <label class="delivery-hidden"><input id="other-delivery" name="delivery-radio" type="radio" value=""/></label>
 
@@ -172,19 +172,24 @@
 
                     <p>Оплата<span> *</span></p>
 
-                    <label for="cash-payment"><input id="cash-payment" name="payment-radio" type="radio" value="cash"/>Наличными в офисе</label>
+                    <input id="cash-payment" name="payment-radio" type="radio" value="cash"/>
+                    <label class="radio-label" for="cash-payment">Наличными в офисе</label>
 
-                    <label for="card-payment"><input id="card-payment" name="payment-radio" type="radio" value="card"/>Оплата картами Visa/Mastercard</label>
+                    <input id="card-payment" name="payment-radio" type="radio" value="card"/>
+                    <label class="radio-label" for="card-payment">Оплата картами Visa/Mastercard</label>
 
-                    <label for="clearing-payment"><input id="clearing-payment" name="payment-radio" type="radio" value="clearing"/>Безналичный расчет</label>
+                    <input id="clearing-payment" name="payment-radio" type="radio" value="clearing"/>
+                    <label class="radio-label" for="clearing-payment">Безналичный расчет</label>
 
-                    <label for="delivery-payment"><input id="delivery-payment" name="payment-radio" type="radio" value="delivery"/>Наложенный платеж</label>
+                    <input id="delivery-payment" name="payment-radio" type="radio" value="delivery"/>
+                    <label class="radio-label" for="delivery-payment">Наложенный платеж</label>
 
-                    <label for="privat-payment"><input id="privat-payment" name="payment-radio" type="radio" value="privat"/>На карту Приват-банка</label>
-
-                    <input type="submit" class="form-submit green-button"/>
+                    <input id="privat-payment" name="payment-radio" type="radio" value="privat"/>
+                    <label class="radio-label" for="privat-payment">На карту Приват-банка</label>
 
                 </div>
+
+                <input type="submit" class="form-submit green-button"/>
 
             </div>
 
