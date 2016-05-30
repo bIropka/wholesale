@@ -98,11 +98,11 @@
 
                 <h3>1. Контатные данные</h3>
 
-                <label for="order-client-name" class="form-field-label">Фамилия Имя Отчество<span>&#x002A;</span></label>
+                <label for="order-client-name" class="form-field-label">Фамилия Имя Отчество<span> &#x002A;</span></label>
                 <input id="order-client-name" type="text" class="form-field" required/>
 
-                <p class="form-field-label">Город проживания</p>
-                <div class="select-callback">
+                <p class="form-field-label">Город проживания<span> &#x002A;</span></p>
+                <div class="custom-select select-city">
                     <i class="fa fa-angle-down"></i>
                     <div class="select-image">
                         <div class="current-choice"><span>Выбрать</span></div>
@@ -117,25 +117,80 @@
                     <label><input class="select-hidden" type="text" required/></label>
                 </div>
 
-                <label for="order-client-phone" class="form-field-label">Мобильный телефон<span>&#x002A;</span></label>
+                <label for="order-client-phone" class="form-field-label">Мобильный телефон<span> &#x002A;</span></label>
                 <input id="order-client-phone" type="text" class="form-field" required/>
 
-                <label for="order-client-email" class="form-field-label">Электронная почта<span>&#x002A;</span></label>
+                <label for="order-client-email" class="form-field-label">Электронная почта<span> &#x002A;</span></label>
                 <input id="order-client-email" type="text" class="form-field" required/>
 
                 <p class="add-recipient">Добавить еще одного получателя</p>
 
-                <label for="order-comment" class="add-comment">Добавить комментарий к заказу</label>
+                <label for="order-comment" class="add-comment form-field-label">Добавить комментарий к заказу</label>
                 <textarea id="order-comment" cols="30" rows="10"></textarea>
 
-                <input id="order-personal-data" type="checkbox" required/>
-                <label for="order-personal-data"></label>
+                <input class="checkbox-hidden" id="order-personal-data" type="checkbox" required/>
+                <label for="order-personal-data" class="form-field-checkbox">
+                    <i class="fa fa-check"></i>
+                    Даю согласие на обработку своих персональных данных
+                </label>
 
             </div>
 
             <div class="payment-delivery">
 
+                <h3>2. Выбор оплаты и доставки</h3>
 
+                <div class="delivery">
+
+                    <p class="title">Доставка<span>*</span></p>
+
+                    <input id="without-delivery" name="delivery-radio" type="radio" value="without" checked/>
+                    <label for="without-delivery">Самовывоз</label>
+
+                    <input id="courier-delivery" name="delivery-radio" type="radio" value="courier"/>
+                    <label for="courier-delivery">Курьерская</label>
+
+                    <input id="newpost-delivery" name="delivery-radio" type="radio" value="newpost"/>
+                    <label for="newpost-delivery">Новая Почта</label>
+
+                    <input id="delivery-delivery" name="delivery-radio" type="radio" value="delivery"/>
+                    <label for="delivery-delivery">Деливери</label>
+
+                    <input id="mist-delivery" name="delivery-radio" type="radio" value="mist"/>
+                    <label for="mist-delivery">Мист Экспресс</label>
+
+                    <input id="ukrpost-delivery" name="delivery-radio" type="radio" value="ukrpost"/>
+                    <label for="ukrpost-delivery">Укрпочта</label>
+
+                    <label class="delivery-hidden"><input id="other-delivery" name="delivery-radio" type="radio" value=""/></label>
+
+                    <div class="add-other-delivery">
+                        <p>Другой грузоперевозчик</p>
+                        <label><input type="text"/></label>
+                    </div>
+
+                </div>
+
+                <div class="payment">
+
+                    <p>Оплата<span>*</span></p>
+
+                    <input id="cash-payment" name="payment-radio" type="radio" value="cash"/>
+                    <label for="cash-payment">Наличными в офисе</label>
+
+                    <input id="card-payment" name="payment-radio" type="radio" value="card"/>
+                    <label for="card-payment">Оплата картами Visa/Mastercard</label>
+
+                    <input id="clearing-payment" name="payment-radio" type="radio" value="clearing"/>
+                    <label for="clearing-payment">Безналичный расчет</label>
+
+                    <input id="delivery-payment" name="payment-radio" type="radio" value="delivery"/>
+                    <label for="delivery-payment">Наложенный платеж</label>
+
+                    <input id="privat-payment" name="payment-radio" type="radio" value="privat"/>
+                    <label for="privat-payment">На карту Приват-банка</label>
+
+                </div>
 
             </div>
 
@@ -331,7 +386,7 @@
         <input id="callback-client-phone" type="text" class="form-field" required/>
 
         <p class="form-field-label">Хотите говорить со специалистом?</p>
-        <div class="select-callback">
+        <div class="custom-select select-callback">
             <i class="fa fa-angle-down"></i>
             <div class="select-image">
                 <div class="current-choice"><span>Выбрать отдел</span></div>
@@ -343,7 +398,7 @@
                     <li>Отдел с очень-очень длинным названием</li>
                 </ul>
             </div>
-            <label><input class="select-hidden" type="text"/></label>
+            <label class="select-hidden"><input type="text"/></label>
         </div>
 
         <input type="submit" class="form-submit green-button" value="Жду звонка"/>

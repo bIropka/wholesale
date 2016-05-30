@@ -2279,10 +2279,87 @@ nav ul li .active {
 .order-page {
     padding-bottom: 100px;
 }
+.order-page h2 {
+    clear: both;
+}
+.contact-data, .payment-delivery {
+    width: 620px;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    margin: 30px 0;
+    padding: 40px 0 40px 35px;
+}
+.payment-delivery {
+    float: right;
+}
 .order-page .result-block {
     background: transparent;
     padding: 0;
 }
+.order-page h3 {
+    margin-bottom: 40px;
+}
+.contact-data .form-field-label {
+    display: block;
+    margin-bottom: 10px;
+}
+.contact-data .form-field, .contact-data .select-image {
+    width: 410px;
+    height: 50px;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+.contact-data .select-city {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.contact-data i {
+    font-size: 32px;
+    color: rgba(153, 153, 153, 0.3);
+    display: block;
+    height: 32px;
+    width: 32px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 9px;
+    z-index: 0;
+    cursor: pointer;
+}
+.add-recipient, .add-comment {
+    display: inline-block;
+    color: #003399;
+    text-decoration: underline dotted;
+    cursor: pointer;
+}
+.add-recipient {
+    margin: 25px 0;
+    text-decoration: underline solid;
+}
+.contact-data textarea {
+    display: none;
+    border: 1px solid #cccccc;
+    resize: none;
+    width: 410px;
+    height: 150px;
+    padding: 15px 25px;
+}
+.contact-data .checkbox-hidden {
+    display: none;
+}
+.form-field-checkbox {
+    display: inline-block;
+    margin-top: 40px;
+}
+
 /******** END OF ORDER PAGE ********/
 /*  */
 
@@ -2397,17 +2474,17 @@ nav ul li .active {
 .form-callback .select-callback {
     position: relative;
 }
-.form-callback .select-image {
+.select-image {
     line-height: 50px;
     cursor: pointer;
     margin-bottom: 40px;
     padding-right: 40px;
     overflow: hidden;
 }
-.form-callback .select-image span {
+.select-image span {
     color: rgba(153, 153, 153, 0.5);
 }
-.form-callback .select-callback i {
+.select-callback i {
     font-size: 32px;
     color: rgba(153, 153, 153, 0.3);
     display: block;
@@ -2419,7 +2496,7 @@ nav ul li .active {
     top: 9px;
     z-index: -1;
 }
-.form-callback .select-image ul {
+.select-image ul {
     display: none;
     width: 100%;
     border: 1px solid #cccccc;
@@ -2434,15 +2511,15 @@ nav ul li .active {
     top: 50px;
 
 }
-.form-callback .select-image ul li {
+.select-image ul li {
     display: block;
     height: 40px;
     line-height: 40px;
 }
-.form-callback .select-image ul li:hover {
+.select-image ul li:hover {
     color: #99cc33;
 }
-.form-callback .select-image ul li:active {
+.select-image ul li:active {
     color: #ff0000;
 }
 .form-callback .form-submit, .form-callback .form-reset {
@@ -2456,7 +2533,7 @@ nav ul li .active {
     font-family: "Arimo Bold", sans-serif;
     color: #ffffff;
 }
-.form-callback label {
+.select-hidden {
     display: none;
 }
 /******** END OF MODAL WINDOWS ********/

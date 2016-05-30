@@ -10,18 +10,20 @@ $(document).ready(function () {
         if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
         if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
     });
+    /* end of window-callback script */
 
-    $('.form-callback .select-callback').click(function() {
+    /* select-image */
+    $('.custom-select').click(function() {
         $(this).find('.select-image ul').slideToggle();
         $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
     });
 
-    $('.form-callback .select-image ul li').click(function() {
+    $('.select-image ul li').click(function() {
         var newChoice = $(this).html();
-        $(this).parents('.select-callback').find('.current-choice').html(newChoice);
-        $(this).parents('.select-callback').find('.select-hidden').val(newChoice);
+        $(this).parents('.custom-select').find('.current-choice').html(newChoice);
+        $(this).parents('.custom-select').find('.select-hidden').val(newChoice);
     });
-    /* end of window-callback script */
+    /* end of select-image */
 
     /* phone-numbers */
     $('.phone-numbers').hover(function() {
