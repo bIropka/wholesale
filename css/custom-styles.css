@@ -2792,13 +2792,41 @@ nav ul li .active {
         overflow: visible;
         white-space: normal;
         vertical-align: middle;
-
     }
     .char-name:after {
         display: none;
     }
     .reviews {
         width: 100%;
+    }
+    .form-callback {
+        width: 310px;
+        height: 400px;
+        padding: 25px;
+    }
+    .form-callback .close-marker {
+        top: 5px;
+        right: 5px;
+    }
+    .form-callback h2 {
+        margin-bottom: 20px;
+    }
+    .form-callback .form-field, .form-callback .select-image {
+        width: 260px;
+        height: 40px;
+        padding-left: 15px;
+        line-height: 40px;
+    }
+    .form-callback .form-submit, .form-callback .form-reset {
+        width: 110px;
+        height: 35px;
+    }
+    .form-callback .select-callback i {
+        top: 6px;
+    }
+    .form-callback .select-image {
+        margin-bottom: 20px;
+        padding-right: 35px;
     }
 }
 @media (max-width: 480px) {
