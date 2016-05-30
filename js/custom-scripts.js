@@ -1,5 +1,28 @@
 $(document).ready(function () {
 
+    /* window-callback */
+    $('.get-callback').click(function () {
+        $('.window-callback').fadeIn();
+    });
+
+    $('.window-callback').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
+        if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
+    });
+
+    $('.form-callback .select-callback').click(function() {
+        $(this).find('.select-image ul').slideToggle();
+        $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
+    });
+
+    $('.form-callback .select-image ul li').click(function() {
+        var newChoice = $(this).html();
+        $(this).parents('.select-callback').find('.current-choice').html(newChoice);
+        $(this).parents('.select-callback').find('.select-hidden').val(newChoice);
+    });
+    /* end of window-callback script */
+
     /* phone-numbers */
     $('.phone-numbers').hover(function() {
         $(this).toggleClass('active');
@@ -22,18 +45,6 @@ $(document).ready(function () {
         $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
     });
     /* end of nav-catalog script */
-
-    /* nav-slider */
-    $('.nav-slider').slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        dots: true,
-        pauseOnDotsHover: true,
-        vertical: true,
-        verticalSwiping: true
-    });
-    /* end of nav-slider */
 
     /* select-filter */
     $('.select-filter ul li a').click(function() {
@@ -60,6 +71,38 @@ $(document).ready(function () {
         }
     });
     /* end of product-amount */
+
+    /* product-info and reviews */
+    $('.nav-product-info li').click(function() {
+        var currentIndex = $(this).index();
+        $('.product-info .active').removeClass('active');
+        $('.product-info li').eq(currentIndex).addClass('active');
+        $('.nav-product-info li').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.product-info .show-all').click(function() {
+        $(this).parents('.product-info li').find('.hidden').slideToggle(1000);
+        $(this).toggleClass('hide-all');
+    });
+
+    $('.reviews .show-all').click(function() {
+        $(this).siblings('.hidden').slideToggle(1000);
+        $(this).toggleClass('hide-all');
+    });
+    /* end of product-info and reviews */
+
+    /* nav-slider */
+    $('.nav-slider').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        pauseOnDotsHover: true,
+        vertical: true,
+        verticalSwiping: true
+    });
+    /* end of nav-slider */
 
     /* nav-products */
     $('.nav-products').slick({
@@ -236,48 +279,5 @@ $(document).ready(function () {
         ]
     });
     /* end of product-gallery */
-
-    /* product-info and reviews */
-    $('.nav-product-info li').click(function() {
-        var currentIndex = $(this).index();
-        $('.product-info .active').removeClass('active');
-        $('.product-info li').eq(currentIndex).addClass('active');
-        $('.nav-product-info li').removeClass('active');
-        $(this).addClass('active');
-    });
-
-    $('.product-info .show-all').click(function() {
-        $(this).parents('.product-info li').find('.hidden').slideToggle(1000);
-        $(this).toggleClass('hide-all');
-    });
-
-    $('.reviews .show-all').click(function() {
-        $(this).siblings('.hidden').slideToggle(1000);
-        $(this).toggleClass('hide-all');
-    });
-    /* end of product-info and reviews */
-
-    /* window-callback */
-    $('.get-callback').click(function () {
-        $('.window-callback').fadeIn();
-    });
-
-    $('.window-callback').click(function (event) {
-        $target = $(event.target);
-        if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
-        if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
-    });
-
-    $('.form-callback .select-callback').click(function() {
-        $(this).find('.select-image ul').slideToggle();
-        $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
-    });
-
-    $('.form-callback .select-image ul li').click(function() {
-        var newChoice = $(this).html();
-        $(this).parents('.select-callback').find('.current-choice').html(newChoice);
-        $(this).parents('.select-callback').find('.select-hidden').val(newChoice);
-    });
-    /* end of window-callback script */
 
 });
