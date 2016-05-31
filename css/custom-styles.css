@@ -461,6 +461,7 @@ nav ul li .active {
 .breadcrumbs {
     display: block;
     margin-bottom: 25px;
+    text-align: left;
 }
 .breadcrumbs li {
     position: relative;
@@ -2280,6 +2281,7 @@ nav ul li .active {
     padding-bottom: 100px;
 }
 .order-page h2 {
+    text-align: left;
     clear: both;
 }
 .contact-data, .payment-delivery {
@@ -2755,6 +2757,17 @@ input[type=radio]:checked + label:before {
     .product-page .top-block, .product-page .articul, .product-gallery {
         text-align: center;
     }
+    .order-page {
+        text-align: center;
+    }
+    .contact-data, .payment-delivery {
+        display: inline-block;
+        width: 500px;
+        margin: 30px 10px;
+        float: none;
+        vertical-align: top;
+        text-align: left;
+    }
 }
 @media (max-width: 1120px) {
     .block-navs, .order-links {
@@ -3002,12 +3015,17 @@ input[type=radio]:checked + label:before {
     .form-callback h2 {
         margin-bottom: 20px;
     }
-    .form-callback .form-field, .form-callback .select-image {
+    .form-callback .form-field, .form-callback .select-image,
+    .contact-data .form-field, .contact-data .select-image {
         width: 260px;
         height: 40px;
         padding-left: 15px;
         line-height: 40px;
     }
+.contact-data textarea {
+    width: 260px;
+    padding-left: 15px;
+}
     .form-callback .form-submit, .form-callback .form-reset {
         width: 110px;
         height: 35px;
@@ -3018,6 +3036,30 @@ input[type=radio]:checked + label:before {
     .form-callback .select-image {
         margin-bottom: 20px;
         padding-right: 35px;
+    }
+    .contact-data, .payment-delivery {
+        display: block;
+        width: 100%;
+        margin: 30px auto;
+    }
+    .order-page .delivery, .order-page .payment {
+        display: inline-block;
+        padding: 0;
+        margin: 40px 0 40px 35px;
+        text-align: left;
+    }
+    .order-page .delivery>p, .order-page .payment>p {
+        position: absolute;
+        left: -25px;
+        top: -35px;
+        color: #333333;
+    }
+    .form-order .form-submit {
+        width: 250px;
+        height: 50px;
+        margin: 0;
+        font-family: "Roboto Bold", sans-serif;
+        font-size: 16px;
     }
 }
 @media (max-width: 480px) {
