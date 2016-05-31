@@ -198,6 +198,7 @@ nav ul li .active {
     z-index: 1;
     border: 2px solid #ffcc00;
     background: #ffffff;
+    z-index: 10;
 }
 .header-top .phone-numbers .contacts-hidden {
     top: 38px;
@@ -336,6 +337,8 @@ nav ul li .active {
     -webkit-box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
     box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 1;
 }
 .logo {
     display: inline-block;
@@ -2477,6 +2480,34 @@ input[type=radio]:checked + label:before {
 }
 
 /******** END OF ORDER PAGE ********/
+
+/******** SIGN PAGES ********/
+.sign-page {
+    padding: 50px 0;
+    background: #efeff0;
+}
+.sign-page .block-content:after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+.reg-block {
+    display: inline-block;
+    width: 950px;
+    float: left;
+}
+.sign-nav {
+    display: inline-block;
+    width: 950px;
+    float: right;
+}
+/* registration */
+
+/* end of */
+
+/******** END OF SIGN PAGES ********/
+
 /*  */
 
 /* end of */
