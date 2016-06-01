@@ -2709,7 +2709,7 @@ input[type=radio]:checked + label:before {
 /******** INFO PAGES ********/
 
 /* delivery and payment page */
-.payment-delivery-page .left-block {
+.payment-delivery-page .left-block, .price-lists-page .left-block {
     padding: 0;
     background: transparent;
 }
