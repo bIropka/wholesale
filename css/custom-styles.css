@@ -195,7 +195,6 @@ nav ul li .active {
     position: absolute;
     width: 175px;
     left: -2px;
-    z-index: 1;
     border: 2px solid #ffcc00;
     background: #ffffff;
     z-index: 10;
@@ -491,6 +490,11 @@ nav ul li .active {
 /* footer-top */
 .footer-top {
     padding: 50px 0;
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: 0 -5px 10px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 -5px 10px -5px rgba(0,0,0,0.5);
+    box-shadow: 0 -5px 10px -5px rgba(0,0,0,0.5);
 }
 .company-block {
     display: inline-block;
@@ -2313,7 +2317,7 @@ nav ul li .active {
     margin-bottom: 10px;
     color: #333333;
 }
-.contact-data .form-field, .contact-data .select-image {
+.select-image {
     width: 410px;
     height: 50px;
     border: 1px solid #cccccc;
@@ -2322,8 +2326,9 @@ nav ul li .active {
     border-radius: 5px;
     margin-bottom: 15px;
     padding-left: 25px;
+    background: #ffffff;
 }
-.contact-data .select-city {
+.select-city {
     position: relative;
     display: inline-block;
     z-index: 1;
@@ -2348,7 +2353,8 @@ nav ul li .active {
     cursor: pointer;
 }
 .control-comment span {
-    color: #003399;
+    color: #003399!important;
+    margin: 0!important;
 }
 .control-comment .show {
     display: none;
@@ -2377,22 +2383,24 @@ nav ul li .active {
     height: 150px;
     padding: 15px 25px;
 }
-.contact-data .checkbox-hidden {
+.checkbox-hidden {
     display: none;
 }
 .form-field-checkbox {
     display: inline-block;
     margin-top: 20px;
     position: relative;
-    padding-left: 40px;
+    padding-left: 30px;
     cursor: pointer;
 }
-.form-field-checkbox i {
+.form-field-checkbox + a {
+    color: #003399;
+}
+.form-field-checkbox:before {
+    content: '';
     display: inline-block;
     width: 20px;
     height: 20px;
-    font-size: 16px;
-    line-height: 20px;
     text-align: center;
     border: 1px solid #cccccc;
     color: #99cc33;
@@ -2404,6 +2412,11 @@ nav ul li .active {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+}
+.checkbox-hidden:checked + .form-field-checkbox:before {
+    content: '\2714';
+    font-size: 16px;
+    line-height: 20px;
 }
 .order-page .delivery, .order-page .payment {
     display: block;
@@ -2486,6 +2499,9 @@ input[type=radio]:checked + label:before {
     padding: 50px 0;
     background: #efeff0;
 }
+.sign-page h2 {
+    margin-bottom: 30px;
+}
 .sign-page .block-content:after {
     content: '';
     display: block;
@@ -2494,17 +2510,68 @@ input[type=radio]:checked + label:before {
 }
 .reg-block {
     display: inline-block;
+    vertical-align: top;
     width: 950px;
-    float: left;
+    padding: 35px 40px;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.reg-block .left-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 410px;
+    margin-right: 80px;
+}
+.reg-block .right-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
 }
 .sign-nav {
     display: inline-block;
-    width: 950px;
-    float: right;
+    vertical-align: top;
+    width: 300px;
+    margin-left: 25px;
 }
-/* registration */
+.sign-nav ul li {
+    display: block;
+}
+.sign-nav ul li a, .sign-nav ul li p {
+    display: block;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 16px;
+    color: #003399;
+}
+.sign-nav ul .active p {
+    background: #ffcc00;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
-/* end of */
+/* registration */
+.reg-form .form-submit {
+    display: block;
+    width: 410px;
+    height: 50px;
+    margin: 30px auto 0;
+    font-family: "Arimo Bold", sans-serif;
+    font-size: 20px;
+}
+.reg-social h3 {
+    margin: 15px 0 25px;
+}
+.reg-social p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* end of registration*/
 
 /******** END OF SIGN PAGES ********/
 
@@ -2600,15 +2667,18 @@ input[type=radio]:checked + label:before {
     font-family: "Arimo Bold", sans-serif;
     margin-bottom: 30px;
 }
-.form-callback .form-field-label {
+.form-field-label {
     display: block;
     margin-bottom: 5px;
 }
-.form-callback .form-field-label span {
+.form-field-label span {
     color: #ff0000;
     margin-left: 3px;
 }
 .form-callback .form-field, .form-callback .select-image {
+    width: 410px;
+}
+.form-field, .select-image {
     width: 400px;
     height: 50px;
     border: 1px solid #cccccc;
@@ -2618,15 +2688,17 @@ input[type=radio]:checked + label:before {
     margin-bottom: 15px;
     padding-left: 25px;
 }
-.form-callback .select-callback {
+.select-callback {
     position: relative;
 }
 .select-image {
     line-height: 50px;
     cursor: pointer;
-    margin-bottom: 40px;
     padding-right: 40px;
     overflow: hidden;
+}
+.select-callback .select-image {
+    margin-bottom: 40px;
 }
 .select-image span {
     color: rgba(153, 153, 153, 0.5);
@@ -2642,6 +2714,10 @@ input[type=radio]:checked + label:before {
     right: 0;
     top: 9px;
     z-index: -1;
+    cursor: pointer;
+}
+.form-callback .select-callback i {
+    z-index: 0;
 }
 .select-image ul {
     display: none;

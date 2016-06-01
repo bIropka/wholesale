@@ -1,9 +1,6 @@
 $(document).ready(function () {
 
     /* order form */
-    $('.form-field-checkbox').click(function () {
-        $(this).find('i').toggleClass('fa-check');
-    });
 
     $('.control-comment').click(function () {
         $('#order-comment').stop().slideToggle();

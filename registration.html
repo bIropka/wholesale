@@ -92,42 +92,38 @@
 
             <form action="#" class="reg-form left-column">
 
-                <div class="left-column">
+                <label for="reg-client-name" class="form-field-label">Ваше имя<span> &#x002A;</span></label>
+                <input id="reg-client-name" type="text" class="form-field" required/>
 
-                    <label for="reg-client-name" class="form-field-label">Ваше имя<span> &#x002A;</span></label>
-                    <input id="reg-client-name" type="text" class="form-field" required/>
-
-                    <p class="form-field-label">Регион проживания<span> &#x002A;</span></p>
-                    <div class="custom-select select-city">
-                        <i class="fa fa-angle-down"></i>
-                        <div class="select-image">
-                            <div class="current-choice"><span>Выбрать</span></div>
-                            <ul>
-                                <li>Харьков</li>
-                                <li>Киев</li>
-                                <li>Большие Комары</li>
-                                <li>Днепродзержинск</li>
-                                <li>Город с очень-очень длинным названием</li>
-                            </ul>
-                        </div>
-                        <label><input class="select-hidden" type="text" required/></label>
+                <p class="form-field-label">Регион проживания<span> &#x002A;</span></p>
+                <div class="custom-select select-city">
+                    <i class="fa fa-angle-down"></i>
+                    <div class="select-image">
+                        <div class="current-choice"><span>Выбрать</span></div>
+                        <ul>
+                            <li>Харьков</li>
+                            <li>Киев</li>
+                            <li>Большие Комары</li>
+                            <li>Днепродзержинск</li>
+                            <li>Город с очень-очень длинным названием</li>
+                        </ul>
                     </div>
-
-                    <label for="reg-client-email" class="form-field-label">Электронная почта<span> &#x002A;</span></label>
-                    <input id="reg-client-email" type="text" class="form-field" required/>
-
-                    <label for="reg-create-password" class="form-field-label">Придумайте пароль<span> &#x002A;</span></label>
-                    <input id="reg-create-password" type="text" class="form-field" required/>
-
-                    <input class="checkbox-hidden" id="reg-personal-data" type="checkbox" required/>
-                    <label for="reg-personal-data" class="form-field-checkbox"><i class="fa fa-check"></i>Даю согласие на обработку своих персональных данных</label>
-
-                    <input class="checkbox-hidden" id="reg-user-agreement" type="checkbox" required/>
-                    <label for="reg-user-agreement" class="form-field-checkbox"><i class="fa fa-check"></i>Соглашаюсь с <a href="#">пользовательски соглашением</a></label>
-
-                    <input type="submit" class="form-submit green-button" value="Зарегистрироваться"/>
-
+                    <label><input class="select-hidden" type="text" required/></label>
                 </div>
+
+                <label for="reg-client-email" class="form-field-label">Электронная почта<span> &#x002A;</span></label>
+                <input id="reg-client-email" type="text" class="form-field" required/>
+
+                <label for="reg-create-password" class="form-field-label">Придумайте пароль<span> &#x002A;</span></label>
+                <input id="reg-create-password" type="text" class="form-field" required/>
+
+                <input class="checkbox-hidden" id="reg-personal-data" type="checkbox" required/>
+                <label for="reg-personal-data" class="form-field-checkbox">Даю согласие на обработку своих персональных данных</label>
+
+                <input class="checkbox-hidden" id="reg-user-agreement" type="checkbox" required/>
+                <label for="reg-user-agreement" class="form-field-checkbox">Соглашаюсь с </label><a href="#"> пользовательски соглашением</a>
+
+                <input type="submit" class="form-submit green-button" value="Зарегистрироваться"/>
 
             </form>
 
@@ -154,9 +150,9 @@
         <div class="sign-nav">
 
             <ul>
-                <li class="active"><a href="#">Регистрация</a></li>
-                <li><a href="#">Вход в личный кабинет</a></li>
-                <li><a href="#">Восстановление пароля</a></li>
+                <li class="active"><p>Регистрация</p></li>
+                <li><a href="authorization.html">Вход в личный кабинет</a></li>
+                <li><a href="password-recovery.html">Восстановление пароля</a></li>
             </ul>
 
         </div>
