@@ -2517,6 +2517,8 @@ input[type=radio]:checked + label:before {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    position: relative;
+    float: left;
 }
 .reg-block .left-column {
     display: inline-block;
@@ -2533,7 +2535,7 @@ input[type=radio]:checked + label:before {
     display: inline-block;
     vertical-align: top;
     width: 300px;
-    margin-left: 25px;
+    float: right;
 }
 .sign-nav ul li {
     display: block;
@@ -2554,7 +2556,6 @@ input[type=radio]:checked + label:before {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-
 /* registration */
 .reg-form .form-submit {
     display: block;
@@ -2569,8 +2570,89 @@ input[type=radio]:checked + label:before {
 }
 .reg-social p {
     color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
 }
-
+.reg-social ul li {
+    display: block;
+    margin-bottom: 15px;
+}
+.reg-social ul li a {
+    display: block;
+    width: 190px;
+    height: 45px;
+    line-height: 45px;
+    color: #ffffff;
+    font-family: "Arimo Bold", sans-serif;
+    -webkit-box-shadow: inset 0 -5px 0 -3px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 -5px 0 -3px rgba(0,0,0,0.2);
+    box-shadow: inset 0 -5px 0 -3px rgba(0,0,0,0.2);
+}
+.reg-social ul li:nth-child(1) a {
+    background: #003399;
+}
+.reg-social ul li:nth-child(1) a:hover {
+    text-decoration: none;
+    background: linear-gradient(to bottom, #2f64ce, #003399);
+}
+.reg-social ul li:nth-child(2) a {
+    background: #336699;
+}
+.reg-social ul li:nth-child(2) a:hover {
+    text-decoration: none;
+    background: linear-gradient(to bottom, #3980c7, #336699);
+}
+.reg-social ul li:nth-child(3) a {
+    background: #ff8d41;
+}
+.reg-social ul li:nth-child(3) a:hover {
+    text-decoration: none;
+    background: linear-gradient(to bottom, #ffc904, #ff8d41);
+}
+.reg-social ul li a i {
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    font-size: 26px;
+    color: #ffffff;
+    text-align: center;
+}
+.reg-social ul li a i:after {
+    content: '';
+    display: block;
+    height: 45px;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    position: absolute;
+    right: -2px;
+    top: 0;
+}
+.reg-social .is-problem {
+    display: block;
+    width: 230px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    border: 1px solid #ffcc00;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: transparent;
+    position: absolute;
+    left: 535px;
+    bottom: 38px;
+}
+.reg-social .is-problem:hover {
+    background: #ffcc00;
+}
+.reg-social .is-problem:active {
+    -webkit-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
+    box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
+}
 /* end of registration*/
 
 /******** END OF SIGN PAGES ********/
@@ -2875,6 +2957,24 @@ input[type=radio]:checked + label:before {
         vertical-align: top;
         text-align: left;
     }
+    .reg-block, .sign-nav {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    .sign-nav {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .sign-nav ul li {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .sign-nav ul li p, .sign-nav ul li a {
+        text-align: center;
+        padding: 0;
+    }
 }
 @media (max-width: 1120px) {
     .block-navs, .order-links {
@@ -2995,6 +3095,26 @@ input[type=radio]:checked + label:before {
     }
     .wide-slider-wrap .controls, .wide-slider-wrap .show-all {
         top: 30px;
+    }
+    .reg-block {
+        width: 100%;
+        padding: 30px 0;
+    }
+    .reg-block .left-column, .reg-block .right-column {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+    .reg-block .left-column:after {
+        content: '';
+        display: block;
+        width: 100%;
+        border-top: 1px dotted #003399;
+        margin: 50px auto 30px;
+    }
+    .reg-social .is-problem {
+        position: static;
+        margin-top: 50px;
     }
 }
 @media (max-width: 800px) {
@@ -3214,6 +3334,25 @@ input[type=radio]:checked + label:before {
     .order-block, .block-help {
         width: 300px;
         margin: 25px auto;
+    }
+    .form-field-label, .form-field-checkbox {
+        width: auto;
+    }
+    .form-field, .select-image {
+        width: 280px;
+        height: 40px;
+        padding-left: 15px;
+        line-height: 40px;
+    }
+    .reg-form .form-submit {
+        width: 280px;
+    }
+    .reg-block .left-column, .reg-block .right-column {
+        padding-left: 20px;
+        width: 100%;
+    }
+    .be-with-us {
+        padding-left: 0;
     }
 
 }
