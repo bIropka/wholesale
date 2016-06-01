@@ -1596,7 +1596,7 @@ nav ul li .active {
     position: relative;
     padding-top: 30px;
 }
-.product-page-controls {
+.page-controls {
     position: absolute;
     top: 20px;
     right: 0;
@@ -2495,14 +2495,14 @@ input[type=radio]:checked + label:before {
 /******** END OF ORDER PAGE ********/
 
 /******** SIGN PAGES ********/
-.sign-page {
+.sign-page, .info-page {
     padding: 50px 0;
     background: #efeff0;
 }
-.sign-page h2 {
+.sign-page h2, .info-page h2 {
     margin-bottom: 30px;
 }
-.sign-page .block-content:after {
+.sign-page .block-content:after, .info-page .block-content:after {
     content: '';
     display: block;
     width: 100%;
@@ -2532,16 +2532,16 @@ input[type=radio]:checked + label:before {
     vertical-align: top;
     width: 350px;
 }
-.sign-nav {
+.right-nav {
     display: inline-block;
     vertical-align: top;
     width: 300px;
     float: right;
 }
-.sign-nav ul li {
+.right-nav ul li {
     display: block;
 }
-.sign-nav ul li a, .sign-nav ul li p {
+.right-nav ul li a, .right-nav ul li p {
     display: block;
     width: 300px;
     height: 50px;
@@ -2551,7 +2551,7 @@ input[type=radio]:checked + label:before {
     font-size: 16px;
     color: #003399;
 }
-.sign-nav ul .active p {
+.right-nav ul .active p {
     background: #ffcc00;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -2705,9 +2705,15 @@ input[type=radio]:checked + label:before {
 
 /******** END OF SIGN PAGES ********/
 
-/*  */
+
+/******** INFO PAGES ********/
+
+/* delivery and payment page */
 
 /* end of */
+
+/******** END OF INFO PAGES ********/
+
 
 /*  */
 
@@ -3008,22 +3014,22 @@ input[type=radio]:checked + label:before {
     .sign-page h2 {
         text-align: center;
     }
-    .left-block, .sign-nav {
+    .left-block, .right-nav {
         display: block;
         float: none;
         margin: 0 auto;
         min-height: inherit;
     }
-    .sign-nav {
+    .right-nav {
         width: 100%;
         text-align: center;
         margin-bottom: 30px;
     }
-    .sign-nav ul li {
+    .right-nav ul li {
         display: inline-block;
         vertical-align: top;
     }
-    .sign-nav ul li p, .sign-nav ul li a {
+    .right-nav ul li p, .right-nav ul li a {
         text-align: center;
         padding: 0;
     }
@@ -3212,7 +3218,7 @@ input[type=radio]:checked + label:before {
     .product-page .breadcrumbs {
         margin-bottom: 50px;
     }
-    .product-page-controls {
+    .page-controls {
         width: 120px;
         top: 60px;
         left: 0;
@@ -3380,7 +3386,7 @@ input[type=radio]:checked + label:before {
         width: 250px;
         margin: 10px 5px;
     }
-    .product-page-controls {
+    .page-controls {
         top: 70px;
     }
     .order-block, .block-help {
