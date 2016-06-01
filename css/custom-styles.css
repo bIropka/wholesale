@@ -2508,7 +2508,7 @@ input[type=radio]:checked + label:before {
     width: 100%;
     clear: both;
 }
-.reg-block {
+.left-block {
     display: inline-block;
     vertical-align: top;
     width: 950px;
@@ -2519,14 +2519,15 @@ input[type=radio]:checked + label:before {
     border-radius: 5px;
     position: relative;
     float: left;
+    min-height: 400px;
 }
-.reg-block .left-column {
+.left-block .left-column {
     display: inline-block;
     vertical-align: top;
     width: 410px;
     margin-right: 80px;
 }
-.reg-block .right-column {
+.left-block .right-column {
     display: inline-block;
     vertical-align: top;
     width: 350px;
@@ -2565,18 +2566,18 @@ input[type=radio]:checked + label:before {
     font-family: "Arimo Bold", sans-serif;
     font-size: 20px;
 }
-.reg-social h3 {
+.reg-social h3, .auth-social h3, .rec-pass-column h3 {
     margin: 15px 0 25px;
 }
-.reg-social p {
+.reg-social p, .auth-social p, .rec-pass-column p {
     color: rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
 }
-.reg-social ul li {
+.sign-social li {
     display: block;
     margin-bottom: 15px;
 }
-.reg-social ul li a {
+.sign-social li a {
     display: block;
     width: 190px;
     height: 45px;
@@ -2587,28 +2588,28 @@ input[type=radio]:checked + label:before {
     -moz-box-shadow: inset 0 -5px 0 -3px rgba(0,0,0,0.2);
     box-shadow: inset 0 -5px 0 -3px rgba(0,0,0,0.2);
 }
-.reg-social ul li:nth-child(1) a {
+.sign-social li:nth-child(1) a {
     background: #003399;
 }
-.reg-social ul li:nth-child(1) a:hover {
+.sign-social li:nth-child(1) a:hover {
     text-decoration: none;
     background: linear-gradient(to bottom, #2f64ce, #003399);
 }
-.reg-social ul li:nth-child(2) a {
+.sign-social li:nth-child(2) a {
     background: #336699;
 }
-.reg-social ul li:nth-child(2) a:hover {
+.sign-social li:nth-child(2) a:hover {
     text-decoration: none;
     background: linear-gradient(to bottom, #3980c7, #336699);
 }
-.reg-social ul li:nth-child(3) a {
+.sign-social li:nth-child(3) a {
     background: #ff8d41;
 }
-.reg-social ul li:nth-child(3) a:hover {
+.sign-social li:nth-child(3) a:hover {
     text-decoration: none;
     background: linear-gradient(to bottom, #ffc904, #ff8d41);
 }
-.reg-social ul li a i {
+.sign-social li a i {
     display: block;
     width: 45px;
     height: 45px;
@@ -2620,7 +2621,7 @@ input[type=radio]:checked + label:before {
     color: #ffffff;
     text-align: center;
 }
-.reg-social ul li a i:after {
+.sign-social li a i:after {
     content: '';
     display: block;
     height: 45px;
@@ -2630,7 +2631,7 @@ input[type=radio]:checked + label:before {
     right: -2px;
     top: 0;
 }
-.reg-social .is-problem {
+.is-problem {
     display: block;
     width: 230px;
     height: 45px;
@@ -2641,19 +2642,66 @@ input[type=radio]:checked + label:before {
     -moz-border-radius: 3px;
     border-radius: 3px;
     background: transparent;
+    margin-top: 50px;
+}
+.reg-social .is-problem {
+    margin-top: 0;
     position: absolute;
     left: 535px;
     bottom: 38px;
 }
-.reg-social .is-problem:hover {
+.is-problem:hover {
     background: #ffcc00;
 }
-.reg-social .is-problem:active {
+.is-problem:active {
     -webkit-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
     -moz-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
     box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
 }
 /* end of registration*/
+
+/* authorization */
+.auth-form .form-field-checkbox {
+    display: block;
+    margin-bottom: 30px;
+}
+.auth-form .form-submit, .auth-form .form-reset {
+    display: inline-block;
+    width: 125px;
+    height: 40px;
+}
+.auth-form .form-reset {
+    margin-left: 20px;
+}
+/* end of authorization */
+
+/* password-recovery */
+.pass-rec-form .form-submit, .pass-rec-form .form-reset {
+    display: inline-block;
+    width: 210px;
+    height: 45px;
+    margin-top: 10px;
+}
+.pass-rec-form .form-reset {
+    width: 175px;
+    margin-left: 10px;
+}
+.rec-pass-column h3 {
+    margin: 0;
+}
+.rec-pass-column p {
+    margin: 22px 0;
+}
+.rec-pass-column a {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #003399;
+}
+.rec-pass-column a:hover {
+    text-decoration: none;
+}
+/* end of password-recovery */
 
 /******** END OF SIGN PAGES ********/
 
@@ -2957,10 +3005,14 @@ input[type=radio]:checked + label:before {
         vertical-align: top;
         text-align: left;
     }
-    .reg-block, .sign-nav {
+    .sign-page h2 {
+        text-align: center;
+    }
+    .left-block, .sign-nav {
         display: block;
         float: none;
         margin: 0 auto;
+        min-height: inherit;
     }
     .sign-nav {
         width: 100%;
@@ -3096,16 +3148,16 @@ input[type=radio]:checked + label:before {
     .wide-slider-wrap .controls, .wide-slider-wrap .show-all {
         top: 30px;
     }
-    .reg-block {
+    .left-block {
         width: 100%;
         padding: 30px 0;
     }
-    .reg-block .left-column, .reg-block .right-column {
+    .left-block .left-column, .left-block .right-column {
         display: block;
         margin: 0 auto;
         float: none;
     }
-    .reg-block .left-column:after {
+    .left-block .left-column:after {
         content: '';
         display: block;
         width: 100%;
@@ -3347,12 +3399,17 @@ input[type=radio]:checked + label:before {
     .reg-form .form-submit {
         width: 280px;
     }
-    .reg-block .left-column, .reg-block .right-column {
+    .left-block .left-column, .left-block .right-column {
         padding-left: 20px;
         width: 100%;
     }
     .be-with-us {
         padding-left: 0;
+    }
+    .pass-rec-form .form-reset {
+        display: block;
+        margin-left: 0;
+        margin-top: 20px;
     }
 
 }
