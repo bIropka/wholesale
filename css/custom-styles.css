@@ -2773,6 +2773,9 @@ input[type=radio]:checked + label:before {
 }
 .price-lists li:hover {
     border: 5px solid #ffcc00;
+    -webkit-box-shadow: 0 13px 10px -5px rgba(0,0,0,0.25), 0 -5px 10px -5px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 13px 10px -5px rgba(0,0,0,0.25), 0 -5px 10px -5px rgba(0,0,0,0.25);
+    box-shadow: 0 13px 10px -5px rgba(0,0,0,0.25), 0 -5px 10px -5px rgba(0,0,0,0.25);
 }
 .price-lists li:after {
     content: '';
