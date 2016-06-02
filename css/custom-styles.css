@@ -2916,22 +2916,43 @@ input[type=radio]:checked + label:before {
 }
 .questions li {
     width: 100%;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     border: 2px solid transparent;
-    border-bottom: 2px dotted rgba(0, 51, 153, 0.3);
+    border-top: 2px dotted rgba(0, 51, 153, 0.3);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+.questions li:first-child {
+    border-top: 2px solid transparent;
+}
+.questions li:last-child {
+    border-bottom: 2px dotted rgba(0, 51, 153, 0.3);
+}
 .questions li:hover {
     border: 2px solid #ffcc00;
 }
+.questions li:hover + li {
+    border-top: 2px solid transparent;
+}
 .answer {
     display: none;
+    color: #999999;
+    padding: 10px 20px;
 }
 .question {
-    line-height: 20px;
+    padding-left: 5px;
+    cursor: pointer;
+    position: relative;
+    color: #003399;
+}
+.question i {
+    display: block;
+    font-size: 24px;
+    color: #003399;
+    position: absolute;
+    right: 10px;
+    top: -2px;
 }
 /* end of questions page */
 

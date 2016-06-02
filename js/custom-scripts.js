@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    /* questions */
+    $('.question').click(function() {
+        $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
+        $(this).siblings('.answer').slideToggle();
+    });
+    /* end of questions*/
+
     /* order form */
 
     $('.control-comment').click(function () {
