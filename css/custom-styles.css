@@ -46,6 +46,7 @@ button, input[type='submit'], input[type='reset'] {
 }
 .green-button:hover {
     background: linear-gradient(to bottom, #bff452, #99cd33);
+    text-decoration: none;
 }
 .green-button:active {
     -webkit-box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.2);
@@ -2755,12 +2756,67 @@ input[type=radio]:checked + label:before {
 }
 /* end of delivery and payment page */
 
+/* price lists */
+.price-lists li {
+    display: block;
+    width: 100%;
+    height: 135px;
+    margin: 20px 0;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 5px solid transparent;
+    text-align: justify;
+    text-align-last: justify;
+    padding: 0 50px 0 25px;
+}
+.price-lists li:hover {
+    border: 5px solid #ffcc00;
+}
+.price-lists li:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.price-lists li .file-info {
+    display: inline-block;
+    width: 350px;
+    vertical-align: top;
+    margin-top: 35px;
+}
+.price-lists li .icon-file {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 45px;
+    margin-top: 40px;
+}
+.icon-pdf {background: url('../images/icons/pdf.png') no-repeat center;}
+.icon-xls {background: url('../images/icons/xls.png') no-repeat center;}
+.icon-doc {background: url('../images/icons/doc.png') no-repeat center;}
+.price-lists li .green-button {
+    display: inline-block;
+    width: 125px;
+    height: 40px;
+    line-height: 40px;
+    font-family: "Roboto Bold", sans-serif;
+    font-size: 16px;
+    vertical-align: top;
+    margin-top: 43px;
+}
+.file-format, .file-size {
+    display: inline-block;
+    color: #808080;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+/* end of price-lists*/
+
 /******** END OF INFO PAGES ********/
 
 
-/*  */
 
-/* end of */
 
 /*  */
 
@@ -3076,6 +3132,13 @@ input[type=radio]:checked + label:before {
         text-align: center;
         padding: 0;
     }
+    .price-lists-page .right-nav ul li a, .price-lists-page .right-nav ul li p {
+        display: inline-block;
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 30px;
+    }
 }
 @media (max-width: 1120px) {
     .block-navs, .order-links {
@@ -3293,6 +3356,9 @@ input[type=radio]:checked + label:before {
     .reviews {
         width: 75%;
     }
+    .price-lists li .file-info {
+        width: 320px;
+    }
 }
 @media (max-width: 640px) {
     .nav-products-wrap {
@@ -3407,6 +3473,26 @@ input[type=radio]:checked + label:before {
     .payment-delivery-list li {
         height: auto;
         padding: 30px 50px;
+    }
+    .price-lists li {
+        height: auto;
+        text-align: center;
+        text-align-last: auto;
+        padding: 0;
+    }
+    .price-lists li .file-info {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+        margin: 20px;
+    }
+    .price-lists li .icon-file {
+        vertical-align: middle;
+        margin: 20px;
+    }
+    .price-lists li .green-button {
+        vertical-align: middle;
+        margin: 20px;
     }
 }
 @media (max-width: 480px) {
