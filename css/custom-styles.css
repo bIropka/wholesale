@@ -2713,7 +2713,7 @@ input[type=radio]:checked + label:before {
     position: relative;
 }
 /* delivery and payment page */
-.payment-delivery-page .left-block, .price-lists-page .left-block, .contacts-page .left-block {
+.payment-delivery-page .left-block, .price-lists-page .left-block, .contacts-page .left-block, .questions-page .left-block {
     padding: 0;
     background: transparent;
 }
@@ -2900,6 +2900,41 @@ input[type=radio]:checked + label:before {
 }
 /* end of contacts page */
 
+/* questions page */
+.questions-list {
+    display: block;
+    width: 100%;
+    padding: 40px 40px 40px 30px;
+    background: #ffffff;
+    margin-bottom: 30px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.questions {
+    margin-top: 30px;
+}
+.questions li {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border: 2px solid transparent;
+    border-bottom: 2px dotted rgba(0, 51, 153, 0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.questions li:hover {
+    border: 2px solid #ffcc00;
+}
+.answer {
+    display: none;
+}
+.question {
+    line-height: 20px;
+}
+/* end of questions page */
+
 /******** END OF INFO PAGES ********/
 
 
@@ -2907,9 +2942,7 @@ input[type=radio]:checked + label:before {
 
 
 
-/*  */
 
-/* end of */
 
 /*  */
 
