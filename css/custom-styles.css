@@ -148,6 +148,44 @@ img {
 .social-square li:nth-child(4) i {background: #ba0000;}
 .social-square li:nth-child(5) i {background: #ff8d41;}
 .social-square li:nth-child(6) i {background: #507fa7;}
+
+/*checkbox */
+.checkbox-hidden {
+    display: none;
+}
+.form-field-checkbox {
+    display: inline-block;
+    margin-top: 20px;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.form-field-checkbox + a {
+    color: #003399;
+}
+.form-field-checkbox:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    color: #99cc33;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.checkbox-hidden:checked + .form-field-checkbox:before {
+    content: '\2714';
+    font-size: 16px;
+    line-height: 20px;
+}
+/* end of checkbox */
 /******** END OF GENERAL ********/
 
 /******** HEADER ********/
@@ -2325,16 +2363,15 @@ nav ul li .active {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin-bottom: 15px;
     padding-left: 25px;
     background: #ffffff;
 }
-.select-city {
+.custom-select {
     position: relative;
     display: inline-block;
-    z-index: 1;
+    margin-bottom: 15px;
 }
-.select-city i {
+.custom-select i {
     font-size: 32px;
     color: rgba(153, 153, 153, 0.3);
     display: block;
@@ -2383,41 +2420,6 @@ nav ul li .active {
     width: 410px;
     height: 150px;
     padding: 15px 25px;
-}
-.checkbox-hidden {
-    display: none;
-}
-.form-field-checkbox {
-    display: inline-block;
-    margin-top: 20px;
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-}
-.form-field-checkbox + a {
-    color: #003399;
-}
-.form-field-checkbox:before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    border: 1px solid #cccccc;
-    color: #99cc33;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-}
-.checkbox-hidden:checked + .form-field-checkbox:before {
-    content: '\2714';
-    font-size: 16px;
-    line-height: 20px;
 }
 .order-page .delivery, .order-page .payment {
     display: block;
@@ -2557,6 +2559,10 @@ input[type=radio]:checked + label:before {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+.right-nav ul li a:hover {
+    text-decoration: none;
+    background: #f7f7f8;
 }
 /* registration */
 .reg-form .form-submit {
@@ -2713,7 +2719,8 @@ input[type=radio]:checked + label:before {
     position: relative;
 }
 /* delivery and payment page */
-.payment-delivery-page .left-block, .price-lists-page .left-block, .contacts-page .left-block, .questions-page .left-block {
+.payment-delivery-page .left-block, .price-lists-page .left-block, .contacts-page .left-block,
+.questions-page .left-block, .partnership-page .left-block {
     padding: 0;
     background: transparent;
 }
@@ -2984,6 +2991,82 @@ input[type=radio]:checked + label:before {
 }
 /* end of questions page */
 
+/* partnership page */
+.partnership-page .left-block>p {
+    color: #4d4d4d;
+    line-height: 1.4;
+}
+.form-partnership {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 40px 30px;
+    background: #ffffff;
+    margin-top: 30px;
+}
+.form-partnership h3 {
+    margin-bottom: 30px;
+}
+.form-partnership textarea {
+    height: 150px;
+    resize: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.form-partnership .form-field {
+    margin-bottom: 0;
+}
+.form-partnership .custom-select {
+    margin-bottom: 0;
+}
+.form-partnership .form-field-label {
+    margin-top: 20px;
+}
+.form-field-checkbox {
+    margin: 15px 0;
+    display: block;
+    color: #999999;
+}
+.form-upload {
+    display: none;
+}
+.form-upload-label {
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    vertical-align: middle;
+    color: #999999;
+    line-height: 50px;
+    text-align: center;
+    margin-right: 30px;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.form-upload-label:hover {
+    color: #000000;
+    border: 1px solid #ffcc00;
+}
+.form-upload-label:active {
+    background: #ffcc00;
+}
+.form-upload-filename {
+    display: inline-block;
+    vertical-align: middle;
+}
+#partnership-personal-data + label {
+    margin: 30px 0;
+}
+.form-partnership .form-submit {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Roboto Bold", sans-serif;
+}
+/* end of partnership page */
+
 /******** END OF INFO PAGES ********/
 
 
@@ -2993,9 +3076,7 @@ input[type=radio]:checked + label:before {
 
 
 
-/*  */
 
-/* end of */
 
 /*  */
 
@@ -3080,6 +3161,9 @@ input[type=radio]:checked + label:before {
 .form-callback .form-field, .form-callback .select-image {
     width: 410px;
 }
+.form-field {
+    margin-bottom: 15px;
+}
 .form-field, .select-image {
     width: 400px;
     height: 50px;
@@ -3087,11 +3171,11 @@ input[type=radio]:checked + label:before {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin-bottom: 15px;
     padding-left: 25px;
 }
 .select-callback {
     position: relative;
+    margin-bottom: 15px;
 }
 .select-image {
     line-height: 50px;
@@ -3134,7 +3218,7 @@ input[type=radio]:checked + label:before {
     position: absolute;
     left: 0;
     top: 50px;
-
+    z-index: 10;
 }
 .select-image ul li {
     display: block;

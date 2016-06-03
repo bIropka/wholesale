@@ -33,7 +33,8 @@ $(document).ready(function () {
 
     /* select-image */
     $('.custom-select').click(function() {
-        $(this).find('.select-image ul').slideToggle();
+        $(this).siblings('.custom-select').find('.select-image ul').stop().slideUp();
+        $(this).find('.select-image ul').stop().slideToggle();
         $(this).find('i').toggleClass('fa-angle-up fa-angle-down');
     });
 
