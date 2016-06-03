@@ -87,14 +87,14 @@ input, textarea, a, button {
     outline: none;
     border: none;
 }
-input::-webkit-input-placeholder {color: #cccccc;}
-input::-moz-placeholder {color: #cccccc;}
-input:-moz-placeholder {color: #cccccc;}
-input:-ms-input-placeholder {color: #cccccc;}
-input:focus::-webkit-input-placeholder {color: transparent;}
-input:focus::-moz-placeholder {color: transparent;}
-input:focus:-moz-placeholder {color: transparent;}
-input:focus:-ms-input-placeholder {color: transparent;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #cccccc; opacity: 1;}
+input::-moz-placeholder, textarea::-moz-placeholder {color: #cccccc; opacity: 1;}
+input:-moz-placeholder, textarea:-moz-placeholder {color: #cccccc; opacity: 1;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color: #cccccc; opacity: 1;}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {color: transparent;}
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {color: transparent;}
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {color: transparent;}
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color: transparent;}
 
 ul li {
     display: inline-block;
@@ -2942,6 +2942,7 @@ input[type=radio]:checked + label:before {
 }
 .question {
     padding-left: 5px;
+    padding-right: 30px;
     cursor: pointer;
     position: relative;
     color: #003399;
@@ -2953,6 +2954,33 @@ input[type=radio]:checked + label:before {
     position: absolute;
     right: 10px;
     top: -2px;
+}
+.form-questions {
+    width: 480px;
+    border: 5px solid #ffcc00;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 30px 0 30px 35px;
+    background: #ffffff;
+}
+.form-questions p {
+    color: #999999;
+    margin: 10px 0 15px;
+}
+.form-questions textarea {
+    height: 100px;
+    resize: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.form-questions .form-submit {
+    width: 185px;
+    height: 40px;
+    font-family: "Roboto Bold", sans-serif;
+    font-size: 16px;
+    color: #999999;
 }
 /* end of questions page */
 
@@ -3643,6 +3671,11 @@ input[type=radio]:checked + label:before {
         vertical-align: middle;
         margin: 20px;
     }
+    .form-questions {
+        width: 460px;
+        padding: 30px 0 30px 20px;
+    }
+
 }
 @media (max-width: 480px) {
     .nav-products-wrap {
@@ -3717,6 +3750,10 @@ input[type=radio]:checked + label:before {
     .payment-delivery-list li {
         height: auto;
         padding: 30px;
+    }
+    .form-questions {
+        width: 300px;
+        padding: 20px 5px;
     }
 
 }
