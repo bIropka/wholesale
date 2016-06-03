@@ -174,8 +174,7 @@ img {
     position: absolute;
     margin: auto;
     left: 0;
-    top: 0;
-    bottom: 0;
+    top: -3px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
@@ -3056,16 +3055,28 @@ input[type=radio]:checked + label:before {
     display: inline-block;
     vertical-align: middle;
 }
-#partnership-personal-data + label {
+#partnership-personal-data + label, #feedback-personal-data + label {
     margin: 30px 0;
 }
-.form-partnership .form-submit {
+.form-partnership .form-submit, .form-feedback .form-submit {
     width: 250px;
     height: 50px;
     font-size: 16px;
     font-family: "Roboto Bold", sans-serif;
 }
 /* end of partnership page */
+
+/* feedback page */
+.select-cause, .form-feedback .form-field {
+    margin-bottom: 20px;
+}
+.form-feedback textarea {
+    height: 150px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    resize: none;
+}
+/* end of feedback page*/
 
 /******** END OF INFO PAGES ********/
 
@@ -3078,9 +3089,7 @@ input[type=radio]:checked + label:before {
 
 
 
-/*  */
 
-/* end of */
 
 /*  */
 
@@ -3515,6 +3524,10 @@ input[type=radio]:checked + label:before {
         width: 100%;
         padding: 30px 0;
     }
+    .feedback-page .left-block {
+        width: 100%;
+        padding: 30px;
+    }
     .left-block .left-column, .left-block .right-column {
         display: block;
         margin: 0 auto;
@@ -3838,6 +3851,10 @@ input[type=radio]:checked + label:before {
     .form-questions {
         width: 300px;
         padding: 20px 5px;
+    }
+    .feedback-page .left-block {
+        width: 100%;
+        padding: 30px 10px;
     }
 
 }
