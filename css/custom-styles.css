@@ -3079,18 +3079,87 @@ input[type=radio]:checked + label:before {
 /* end of feedback page*/
 
 /******** END OF INFO PAGES ********/
+.catalog-page:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.categories-wrap {
+    display: inline-block;
+    width: 960px;
+    float: right;
+    margin-top: 40px;
+    border: 1px solid black;
+}
+.categories-wrap h2 {
+    display: inline-block;
+}
+.categories {
+    margin: 30px 0;
+    text-align: center;
+}
+.categories>li {
+    width: 305px;
+    vertical-align: top;
+    border: 1px solid #e6e6e6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 15px 5px;
+    position: relative;
+    text-align: left;
+    padding: 10px 10px 25px;
+}
+.categories>li:hover {
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 0 0 5px #ffcc00, 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 0 5px #ffcc00, 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 5px #ffcc00, 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+.category-image {
+    display: block;
+    width: 222px;
+    height: 173px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+}
+.categories>li h3 {
+    margin-left: 10px;
+}
+.categories>li li {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+.categories>li li a {
+    display: block;
+    width: 100%;
+    color: #003399;
+    line-height: 1.5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 0 20px 0 10px;
+    position: relative;
+}
+.categories>li li a:hover {
+    text-decoration: none;
+    background: #ffcc00;
+    color: #000000;
+}
+.categories>li li a i {
+    font-size: 20px;
+    color: #003399;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+/******** CATALOG PAGE ********/
 
 
 
-
-
-
-
-
-
-
-
-
+/******** END OF CATALOG PAGE ********/
 /*  */
 
 /* end of */
@@ -3098,7 +3167,6 @@ input[type=radio]:checked + label:before {
 /*  */
 
 /* end of */
-
 /******** MODAL WINDOWS ********/
  /* window callback */
 .window-callback {
