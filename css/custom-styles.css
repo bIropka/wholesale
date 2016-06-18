@@ -1136,6 +1136,7 @@ nav ul li .active {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    padding: 10px;
 }
 .article-category {
     font-size: 16px;
